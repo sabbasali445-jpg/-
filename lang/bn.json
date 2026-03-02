@@ -11,7 +11,7 @@
     "reconnect": "[{0}] রিকানেক্ট হচ্ছে...({1})",
     "reconnect_after": "[{0}] ১ মিনিট পরে রিকানেক্ট হবে",
     "another_login": "[{0}] সেশন অন্য ডিভাইসে লগইন হয়েছে।",
-    "error_message": "---এরর রিপোর্ট---\n\nভার্সন : {0}\nমেসেজ : {1}\nএরর   : {2}\nজিডি     : {3}\nকমান্ড : {4}\nপ্ল্যাটফর্ম : {5}\n\n----- LyFE দ্বারা তৈরি ❣ -----",
+    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           মেসেজ ডিলিট করা হয়েছে",
     "install_external_plugin": "[{0}] এক্সটার্নাল প্লাগইন ইন্সটল করা হচ্ছে...",
     "installed_external_plugin": "[{0}] এক্সটার্নাল প্লাগইন ইন্সটল করা হয়েছে",
@@ -20,18 +20,39 @@
     "plugins_installed": "[{0}] প্লাগইন ইন্সটল করা হয়েছে",
     "plugin_install_error": "[{0}] {1} ইন্সটল করতে এরর, প্লাগইন ডিলিট করা হচ্ছে",
     "plugin_not_found": "[{0}] প্লাগইন {1} পাওয়া যায়নি (404), প্লাগইন ডিলিট করা হচ্ছে",
-    "group_cmd": "এই কমান্ড শুধুমাত্র গ্রুপ চ্যাটে ব্যবহার করা যায়।"
+    "group_cmd": "এই কমান্ড শুধুমাত্র গ্রুপ চ্যাটে ব্যবহার করা যায়।",
+    "labels": {
+      "sudo": "SUDO",
+      "auto_read": "AUTO READ MSG",
+      "auto_status": "AUTO STATUS VIEW",
+      "auto_reject": "AUTO REJECT CALL",
+      "always_online": "ALWAYS ONLINE",
+      "anti_delete": "ANTI DELETE MSG",
+      "auto_update": "AUTO UPDATE BOT"
+    },
+    "promoted": "promoted",
+    "demoted": "demoted",
+    "file_size_error": "Size is {0}\n\n{1}",
+    "missing_jid": "missing jids",
+    "no_contacts": "not found contacts, please add contacts",
+    "reaction_not_enabled": "Reaction not enabled",
+    "reaction_not_allowed": "this reaction not allowed",
+    "metadata_fetch_failed": "failed to fetch metadata",
+    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
+    "screenshot_error": "an error occured",
+    "id_missing": "id missing",
+    "not_on_whatsapp": "{0} is not on whatsapp.",
+    "yt_auth_required": "ডাউনলোড ব্যর্থ: YouTube-এর জন্য প্রমাণীকরণ (Authentication) প্রয়োজন।\\n\\n*সমাধান:*\\n1. *Google Auth (সুপারিশকৃত):* আপনার Google অ্যাকাউন্ট লিঙ্ক করতে `.gauth auth` ব্যবহার করুন।\\n2. *YT_COOKIE:* `YT_COOKIE` এনভায়রনমেন্ট ভেরিয়েবল সেট করুন।\\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}"
   },
   "plugins": {
     "common": {
-      "reply_to_message": "একটি মেসেজের রিপ্লাই করুন",
-      "not_admin": "আমি অ্যাডমিন নই।",
       "reply_to_image": "একটি ইমেজের রিপ্লাই করুন",
       "update": "সেটিংস সফলভাবে আপডেট করা হয়েছে! আপনার পছন্দগুলি সেভ করা হয়েছে এবং এখন সক্রিয়।"
     },
     "menu": {
       "help": "╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ প্রিফিক্স : {0}\n│ ইউজার : {1}\n│ সময় : {2}\n│ দিন : {3}\n│ তারিখ : {4}\n│ ভার্সন : {5}\n│ প্লাগইন : {6}\n│ র‍্যাম : {7}\n│ আপটাইম : {8}\n│ প্ল্যাটফর্ম : {9}\n╰────────────────",
-      "menu": "╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ প্রিফিক্স : {0}\n┃❃│ ইউজার : {1}\n┃❃│ সময় : {2}\n┃❃│ দিন : {3}\n┃❃│ তারিখ : {4}\n┃❃│ ভার্সন : {5}\n┃❃│ প্লাগইন : {6}\n┃❃│ র‍্যাম : {7}\n┃❃│ আপটাইম : {8}\n┃❃│ প্ল্যাটফর্ম : {9}\n┃❃╰───────────────\n╰═════════════════⊷"
+      "menu": "╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ প্রিফিক্স : {0}\n┃❃│ ইউজার : {1}\n┃❃│ সময় : {2}\n┃❃│ দিন : {3}\n┃❃│ তারিখ : {4}\n┃❃│ ভার্সন : {5}\n┃❃│ প্লাগইন : {6}\n┃❃│ র‍্যাম : {7}\n┃❃│ আপটাইম : {8}\n┃❃│ প্ল্যাটফর্ম : {9}\n┃❃╰───────────────\n╰═════════════════⊷",
+      "disabled": "disabled"
     },
     "afk": {
       "example": "> AFK ব্যবহার:\n- AFK সেট করুন: afk [কারণ]\n- উদাহরণ: afk আমি ব্যস্ত শেষ দেখা #lastseen আগে\n- মেসেজ পাঠানো স্বয়ংক্রিয়ভাবে AFK স্ট্যাটাস সরিয়ে দেবে\n- AFK বন্ধ করুন: afk off",
@@ -43,28 +64,61 @@
       "desc": "বটের জীবিত স্ট্যাটাস মেসেজ দেখান, ঐচ্ছিক কাস্টম টেক্সট সহ।"
     },
     "antifake": {
-      "example": "Antifake স্ট্যাটাস: {0}\n\n> ব্যবহারের উদাহরণ:\n- antifake list - দেশের কোড দেখুন\n- antifake !91,1 - নির্দিষ্ট দেশের কোড অনুমতি দিন/অনুমতি দিন না\n- antifake on | off - Antifake চালু/বন্ধ করুন",
+      "example": "Antifake স্ট্যাটাস: {0}\n\n> ব্যবহারের উদাহরণ:\n- *antifake list* - দেশের কোড দেখুন\n- *antifake add 91,1* - অনুমোদিত তালিকায় দেশের কোড যোগ করুন\n- *antifake remove 91,1* - অনুমোদিত তালিকা থেকে দেশের কোড সরান\n- *antifake on | off* - Antifake চালু/বন্ধ করুন",
       "desc": "ফেক নাম্বার বিরোধী সক্ষম বা কনফিগার করুন",
       "not": "কোন দেশের কোড তালিকাভুক্ত নেই।",
-      "status": "Antifake এখন {0}।",
-      "update": "> Antifake আপডেট করা হয়েছে\n*অনুমতি দেওয়া:* {0}\n*অনুমতি দেওয়া হয়নি:* {1}"
+      "status": "Antifake এখন *{0}*।",
+      "update": "> Antifake আপডেট করা হয়েছে\n*অনুমতি দেওয়া:* {0}\n*অনুমতি দেওয়া হয়নি:* {1}",
+      "allow_prompt": "*Please provide country codes to allow (whitelist mode)*\n_Example: antifake allow 1,91_",
+      "disallow_prompt": "*Please provide country codes to disallow (blacklist mode)*\n_Example: antifake disallow 92,93_",
+      "remove_prompt": "*Please provide country codes to remove*\n_Example: antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Blacklist Mode. Use `antifake clear` first to switch to Whitelist Mode._",
+      "mode_conflict_blacklist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Whitelist Mode. Use `antifake clear` first to switch to Blacklist Mode._",
+      "whitelist_success": "*✅ Allowed country codes (Whitelist Mode):*\n{0}\n\n_These codes will be allowed, all others will be blocked._",
+      "blacklist_success": "*🚫 Disallowed country codes (Blacklist Mode):*\n{0}\n\n_These codes will be blocked, all others will be allowed._",
+      "removed": "*Removed country codes:*\n{0}",
+      "cleared": "*🗑️ Antifake list cleared and disabled*",
+      "whitelist_mode": "🟢 Whitelist Mode (Allow Only)",
+      "blacklist_mode": "🔴 Blacklist Mode (Block Only)",
+      "enabled": "সক্ষম",
+      "disabled": "অক্ষম"
     },
     "antilink": {
       "desc": "লিঙ্ক বিরোধী সক্ষম বা কনফিগার করুন",
-      "disable": "Antilink ইতিমধ্যে বন্ধ আছে।",
-      "antilink_notset": "Antilink কনফিগার করা হয়নি।",
-      "status": "Antilink এখন {0}।",
-      "info": "> Antilink স্ট্যাটাস: {0}\n*অনুমতি দেওয়া URL:* {1}\n অ্যাকশন : {2}",
-      "action_invalid": "অবৈধ অ্যাকশন নির্দিষ্ট করা হয়েছে।",
-      "action_update": "Antilink অ্যাকশন আপডেট করা হয়েছে: {0}",
+      "disable": "_Antilink ইতিমধ্যে বন্ধ আছে।_",
+      "antilink_notset": "Antilink সমস্ত লিঙ্ক ব্লক করার জন্য কনফিগার করা হয়েছে (কোনো URL তালিকা সেট করা নেই)। নির্দিষ্ট URL কনফিগার করতে 'antilink allow' বা 'antilink disallow' ব্যবহার করুন।",
+      "status": "Antilink এখন *{0}*।",
+      "info": "> Antilink স্ট্যাটাস: {0}\n*অনুমতি দেওয়া URL:* {1}\n *অ্যাকশন :* {2}",
+      "action_invalid": "*অবৈধ অ্যাকশন নির্দিষ্ট করা হয়েছে।*",
+      "action_update": "Antilink অ্যাকশন আপডেট করা হয়েছে: *{0}*",
       "update": "> Antilink আপডেট করা হয়েছে\n*অনুমতি দেওয়া:* {0}\n*অনুমতি দেওয়া হয়নি:* {1}",
-      "example": "Antilink স্ট্যাটাস: {0}\n\n> ব্যবহারের উদাহরণ:\n- antilink info - বর্তমান সেটিংস দেখুন\n- antilink whatsapp.com - নির্দিষ্ট URL অনুমতি দিন\n- antilink on | off - Antilink চালু/বন্ধ করুন\n- antilink action/<kick | warn | null> - লিঙ্কের জন্য অ্যাকশন সেট করুন"
+      "enabled": "সক্ষম",
+      "disabled": "অক্ষম",
+      "example": "Antilink স্ট্যাটাস: *{0}*\n\n> ব্যবহারের উদাহরণ:\n- antilink list - বর্তমান সেটিংস দেখুন\n- antilink allow whatsapp.com - নির্দিষ্ট URL অনুমতি দিন\n- antilink disallow facebook.com - নির্দিষ্ট URL নিষিদ্ধ করুন\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Antilink চালু/বন্ধ করুন\n- antilink kick | warn | null - লিঙ্কের জন্য অ্যাকশন সেট করুন",
+      "allow_prompt": "*Please provide a URL to allow.*",
+      "no_new_urls": "*No new URLs to add.* All URLs already exist in the list.",
+      "urls_updated": "*Allowed URLs updated*\n\nAdded: {0}\nTotal: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "disallow_prompt": "*Please provide a URL to disallow.*",
+      "no_disallowed_urls": "*No new URLs to disallow.* All URLs are already disallowed.",
+      "disallowed_updated": "*Disallowed URLs updated*\n\nAdded to blocklist: {0}\nTotal blocked: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "settings_cleared": "*Antilink settings cleared.*",
+      "allowed_cleared": "*Allowed URLs cleared.*",
+      "disallowed_cleared": "*Disallowed URLs cleared.*"
     },
     "antiword": {
       "desc": "গ্রুপ চ্যাটে নির্দিষ্ট শব্দ ফিল্টার করুন",
-      "example": "AntiWord স্ট্যাটাস: {0}\n> ব্যবহারের উদাহরণ:\n- antiword action/<kick | warn | null>* - লঙ্ঘনের জন্য অ্যাকশন সেট করুন\n- antiword on | off - শব্দ ফিল্টারিং চালু/বন্ধ করুন\n- setvar ANTIWORDS:word1,word2,... - ব্লক করা শব্দ নির্ধারণ করুন",
-      "action_update": "AntiWord অ্যাকশন আপডেট করা হয়েছে: {0}",
-      "status": "AntiWord এখন {0}।"
+      "example": "AntiWord স্ট্যাটাস: {0}\n> *ব্যবহারের উদাহরণ:*\n- antiword kick | warn | null - লঙ্ঘনের জন্য অ্যাকশন সেট করুন\n- antiword on | off - শব্দ ফিল্টারিং চালু/বন্ধ করুন\n- antiword add word1,word2 - ব্লক তালিকায় শব্দ যোগ করুন\n- antiword remove word1,word2 - ব্লক তালিকা থেকে শব্দ সরান\n- antiword list - শব্দ দেখুন",
+      "action_update": "AntiWord অ্যাকশন আপডেট করা হয়েছে: *{0}*",
+      "status": "AntiWord এখন *{0}*।",
+      "add_prompt": "*অনুগ্রহ করে যোগ করার জন্য শব্দ প্রদান করুন।*",
+      "added": "*শব্দ যোগ করা হয়েছে:*\n{0}",
+      "remove_prompt": "*অনুগ্রহ করে সরানোর জন্য শব্দ প্রদান করুন।*",
+      "removed": "*শব্দ সরানো হয়েছে:*\n{0}",
+      "activated": "সক্রিয়",
+      "deactivated": "নিষ্ক্রিয়",
+      "no_words": "*কোন শব্দ সেট করা হয়নি।*",
+      "info": "*AntiWord স্ট্যাটাস:* {0}\n*অ্যাকশন:* {1}\n\n*শব্দ:* {2}",
+      "cleared": "*AntiWord তালিকা পরিষ্কার করা হয়েছে।*"
     },
     "apk": {
       "desc": "APKMirror থেকে APK ডাউনলোড করুন",
@@ -157,16 +211,18 @@
       "delupdate": "গ্রিটিং মেসেজ ডিলিট করা হয়েছে।"
     },
     "greetings": {
-      "welcome_desc": "নতুন মেম্বারদের জন্য ওয়েলকাম মেসেজ পাঠান",
-      "welcome_example": "ওয়েলকাম বর্তমানে {0}\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://levanter-delta.vercel.app/",
-      "welcome_enable": "ওয়েলকাম এখন চালু করা হয়েছে",
-      "welcome_disable": "ওয়েলকাম এখন বন্ধ করা হয়েছে",
-      "welcome_delete": "ওয়েলকাম মেসেজ ডিলিট করা হয়েছে",
+      "welcome_desc": "নতুন মেম্বারদের জন্য ওয়েলকাম মেসেজ পাঠান",
+      "welcome_example": "ওয়েলকাম বর্তমানে *{0}*\n\n> *ব্যবহারের উদাহরণ:*\n- welcome হাই &mention! &name-এ স্বাগতম - মেসেজ সেট করুন\n- welcome on | off - চালু/বন্ধ করুন\n- welcome delete - মেসেজ ডিলিট করুন\n\n> *প্লেসহোল্ডার:*\n- &mention - নতুন মেম্বার উল্লেখ করুন\n- &name - গ্রুপের নাম\n- &desc - গ্রুপ বর্ণনা\n- &size - মেম্বার সংখ্যা\n- &pp - মেম্বারের প্রোফাইল পিকচার\n\n> *মিডিয়া:* ছবি/ভিডিওতে রিপ্লাই করুন অথবা মেসেজে URL যোগ করুন\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://levanter.site",
+      "welcome_enable": "ওয়েলকাম এখন চালু করা হয়েছে",
+      "welcome_disable": "ওয়েলকাম এখন বন্ধ করা হয়েছে",
+      "welcome_delete": "ওয়েলকাম মেসেজ ডিলিট করা হয়েছে",
+      "welcome_not_set": "_প্রথমে ওয়েলকাম মেসেজ সেট করুন!_\n\n> *উদাহরণ:*\nwelcome হাই &mention! &name-এ স্বাগতম\n\nতারপর ব্যবহার করুন: welcome on",
       "goodbye_desc": "মেম্বারদের জন্য গুডবাই মেসেজ পাঠান",
-      "goodbye_example": "গুডবাই বর্তমানে {0}\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://levanter-delta.vercel.app/",
-      "goodbye_enable": "গুডবাই এখন চালু করা হয়েছে",
-      "goodbye_disable": "গুডবাই এখন বন্ধ করা হয়েছে",
-      "goodbye_delete": "গুডবাই মেসেজ ডিলিট করা হয়েছে"
+      "goodbye_example": "গুডবাই বর্তমানে *{0}*\n\n> *ব্যবহারের উদাহরণ:*\n- goodbye বিদায় &mention! পরে দেখা হবে - মেসেজ সেট করুন\n- goodbye on | off - চালু/বন্ধ করুন\n- goodbye delete - মেসেজ ডিলিট করুন\n\n> *প্লেসহোল্ডার:*\n- &mention - চলে যাওয়া মেম্বার উল্লেখ করুন\n- &name - গ্রুপের নাম\n- &desc - গ্রুপ বর্ণনা\n- &size - মেম্বার সংখ্যা\n- &pp - মেম্বারের প্রোফাইল পিকচার\n\n> *মিডিয়া:* ছবি/ভিডিওতে রিপ্লাই করুন অথবা মেসেজে URL যোগ করুন\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://levanter.site",
+      "goodbye_enable": "গুডবাই এখন চালু করা হয়েছে",
+      "goodbye_disable": "গুডবাই এখন বন্ধ করা হয়েছে",
+      "goodbye_delete": "গুডবাই মেসেজ ডিলিট করা হয়েছে",
+      "goodbye_not_set": "_প্রথমে গুডবাই মেসেজ সেট করুন!_\n\n> *উদাহরণ:*\ngoodbye বিদায় &mention! আমাদের সাথে থাকার জন্য ধন্যবাদ\n\nতারপর ব্যবহার করুন: goodbye on"
     },
     "groq": {
       "example": "উদাহরণ: groq হাই\n\nআপনি ঐচ্ছিকভাবে নিম্নলিখিত এনভায়রনমেন্ট ভেরিয়েবল সেট করতে পারেন:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nআরো বিস্তারিত জানতে ভিজিট করুন: https://console.groq.com/keys",
@@ -230,7 +286,9 @@
     },
     "common_members": {
       "desc": "দুই বা ততোধিক গ্রুপে কমন মেম্বার দেখান বা সরান।",
-      "found": "0 জন কমন মেম্বার পাওয়া গেছে।"
+      "found": "0 জন কমন মেম্বার পাওয়া গেছে।",
+      "common_usage": "*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.",
+      "ginfo_usage": "*Example : info group_invte_link*"
     },
     "insta": {
       "usage": "উদাহরণ: insta <Instagram URL>",
@@ -358,7 +416,7 @@
       "usage": "উদাহরণ: mention on | off | get\n(একটি মেসেজ রিপ্লাই করে স্পেসিফিক ইউজার টার্গেট করুন।)",
       "desc": "অটোমেটেড রিপ্লাইয়ের জন্য মেনশন ফিচার কনফিগার করুন।",
       "not_activated": "মেনশন রিপ্লাই অ্যাক্টিভেট করা নেই।",
-      "current_status": "মেনশন {0}। বিস্তারিত জানতে ভিজিট করুন: https://levanter-delta.vercel.app/",
+      "current_status": "মেনশন {0}। বিস্তারিত জানতে ভিজিট করুন: https://levanter.site",
       "activated": "মেনশন রিপ্লাই অ্যাক্টিভেট করা হয়েছে।",
       "deactivated": "মেনশন রিপ্লাই ডিএক্টিভেট করা হয়েছে।",
       "updated": "মেনশন সেটিংস আপডেট করা হয়েছে।"
@@ -381,13 +439,14 @@
     },
     "movie": {
       "usage": "উদাহরণ: movie <movie title>",
-      "not_found": "মুভি পাওয়া যায়নি। দয়া করে টাইটেল চেক করে আবার চেষ্টা করুন।",
+      "not_found": "মুভি পাওয়া যায়নি. দয়া করে টাইটেল চেক করে আবার চেষ্টা করুন।",
       "desc": "OMDB API থেকে মুভির বিস্তারিত তথ্য, প্লট সহ ফেচ করুন।"
     },
     "msgs": {
       "desc": "গ্রুপের প্রত্যেক সদস্যের মেসেজ কাউন্ট দেখান, ব্যক্তিগত টোটাল এবং শেষ দেখা সময় সহ।",
       "msg_init": "\n*নম্বর :* {0}\n*নাম :* {1}\n*মোট মেসেজ :* {2}\n",
-      "msg_last": "*শেষ দেখা :* {0} আগে\n"
+      "msg_last": "*শেষ দেখা :* {0} আগে\n",
+      "no_activity": "No activity recorded yet."
     },
     "reset": {
       "usage": "উদাহরণ: reset all OR reset <reply/mention>",
@@ -400,6 +459,21 @@
       "desc": "ইনঅ্যাকটিভ মেম্বারদের চিহ্নিত করুন বা সরান মেসেজ কাউন্ট বা ইনঅ্যাকটিভিটি সময়ের ভিত্তিতে। 'kick' যোগ করে মেম্বার সরান।",
       "inactives": "_মোট ইনঅ্যাকটিভ মেম্বার : {0}_",
       "removing": "_৭ সেকেন্ডে {0} ইনঅ্যাকটিভ মেম্বার সরানো হচ্ছে_"
+    },
+    "weather": {
+      "desc": "weather info",
+      "usage": "*Example : weather delhi*",
+      "not_found": "_{0} not found_",
+      "report": "*Name :* {0}\n*Country :* {1}\n*Weather :* {2}\n*Temp :* {3}°\n*Feels Like :* {4}°\n*Humidity :* {5}%\n*Visibility  :* {6}m\n*Wind* : {7}m/s {8}\n*Sunrise :* {9}\n*Sunset :* {10}"
+    },
+    "y2mate": {
+      "ytv_desc": "Download YouTube video",
+      "ytv_usage": "_Example: ytv url_",
+      "yta_desc": "Download YouTube audio",
+      "yta_usage": "_Example: yta darari/yt url_",
+      "invalid_link": "*Provide a valid YouTube link!*",
+      "no_video": "*No video found*",
+      "no_audio": "_Audio not found._"
     },
     "amute": {
       "usage": "ব্যবহার: amute <hour> <min>\n- amute on | off\n- amute info\n\nমেসেজ রিপ্লাই করে মিউট মেসেজ সেট করুন।",
@@ -427,24 +501,37 @@
       "usage": "> উদাহরণ:\n- zushi ping, sticker\n- সব কমান্ড সেট করতে 'list' টাইপ করুন এবং তারপর কপি করা মেসেজ রিপ্লাই করুন (যেমন: zushi copied_message)।",
       "desc": "অন্যান্যকে চ্যাটে নির্দিষ্ট কমান্ড ব্যবহার করার অনুমতি দিন।",
       "already_set": "{0} ইতিমধ্যে কনফিগার করা আছে।",
-      "allowed": "*@{0} এর জন্য অনুমোদিত কমান্ড*\n{1}"
+      "allowed": "*@{0} এর জন্য অনুমোদিত কমান্ড*\n{1}",
+      "no_input": "⚠️ অনুগ্রহ করে কমান্ডের নাম প্রদান করুন\n\n📝 উদাহরণ:\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 স্পেস দিয়ে আলাদা করে একাধিক কমান্ড যোগ করুন",
+      "duplicates": "❌ কমান্ডগুলি ইতিমধ্যে অনুমোদিত: {0}\n\n📋 বর্তমানে অনুমোদিত কমান্ড ({1} টি):\n{2}\n\n💡 সব অনুমোদিত কমান্ড দেখতে .yami ব্যবহার করুন\n💡 কমান্ড সরাতে .ope ব্যবহার করুন",
+      "invalid": "⚠️ কোন বৈধ কমান্ড পাওয়া যায়নি\n\nঅবৈধগুলি এড়িয়ে যাওয়া হয়েছে: {0}\n\n💡 উপলব্ধ কমান্ড দেখতে .help ব্যবহার করুন",
+      "error": "❌ এরর: {0}",
+      "success": "✅ {0} টি কমান্ড {1} সফলভাবে যোগ করা হয়েছে:\n{2}\n\n📊 @{3} এর জন্য মোট অনুমোদিত: {0} টি কমান্ড {1}\n\n💡 ব্যবহারকারীরা এখন এই কমান্ডগুলি ব্যবহার করতে পারবেন"
     },
     "yami": {
       "usage": "সহজভাবে ব্যবহার করুন: yami",
       "desc": "এই চ্যাটে বর্তমানে অনুমোদিত কমান্ডের তালিকা দেখান।",
-      "not_set": "এখনো কোনো অনুমোদিত কমান্ড সেট করা হয়নি।"
+      "not_set": "এখনো কোনো অনুমোদিত কমান্ড সেট করা হয়নি।",
+      "no_commands": "📋 কোন অনুমোদিত কমান্ড পাওয়া যায়নি\n\n💡 কমান্ড যোগ করতে .zushi ব্যবহার করুন\n📝 উদাহরণ: .zushi song video sticker",
+      "list": "📋 @{0} এর জন্য অনুমোদিত কমান্ড:\n\n{1}\n\n📊 মোট: {2} টি কমান্ড {3}\n\n💡 কমান্ড সরান: .ope <কমান্ডের নাম>\n💡 সব সরান: .ope all"
     },
     "ope": {
       "usage": "উদাহরণ: ope ping, sticker OR ope all",
       "desc": "নির্দিষ্ট অনুমোদিত কমান্ড ডিলিট বা আনসেট করুন।",
       "not_found": "{0} এর জন্য কোনো অনুমোদিত কমান্ড পাওয়া যায়নি।",
       "all_removed": "সব অনুমোদিত কমান্ড সরানো হয়েছে।",
-      "removed": "*@{0} এর জন্য সরানো কমান্ড*\n{1}"
+      "removed": "*@{0} এর জন্য সরানো কমান্ড*\n{1}",
+      "no_input": "⚠️ অনুগ্রহ করে সরানোর জন্য কমান্ডের নাম প্রদান করুন\n\n📝 উদাহরণ:\n  • .ope song video\n  • .ope all (সবকিছু মুছে ফেলে)\n\n💡 অনুমোদিত কমান্ড দেখতে .yami ব্যবহার করুন",
+      "not_found_list": "❌ কমান্ড {0} পাওয়া যায়নি: {1}{2}\n\n💡 সব অনুমোদিত কমান্ড দেখতে .yami ব্যবহার করুন\n📝 উদাহরণ: .ope song video",
+      "error": "❌ এরর: {0}",
+      "no_commands": "⚠️ এই ব্যবহারকারী/গ্রুপের জন্য কোনো কমান্ড পাওয়া যায়নি\n\n💡 প্রথমে কমান্ড যোগ করতে .zushi ব্যবহার করুন",
+      "all_success": "✅ সব কমান্ড সরানো হয়েছে\n\n💡 নতুন কমান্ড যোগ করতে .zushi ব্যবহার করুন",
+      "success": "✅ {0} টি কমান্ড {1} সরানো হয়েছে:\n{2}\n\n📊 জন্য: @{3}\n\n💡 বাকি কমান্ড দেখতে .yami ব্যবহার করুন\n💡 সবকিছু সরাতে .ope all ব্যবহার করুন"
     },
     "pdm": {
       "usage": "ব্যবহার: pdm on | off",
       "desc": "গ্রুপে প্রমোট/ডিমোট ইভেন্টের জন্য অটোমেটিক নোটিফিকেশন চালু বা বন্ধ করুন।",
-      "not_found": "দয়া করে 'on' বা 'off' উল্লেখ করুন। উদাহরণ: pdm on",
+      "not_found": "দয়া করে 'on' বা 'off' উল্লেখ করুন। উদাহরণ: pdm on",
       "activated": "প্রমোট/ডিমোট অ্যালার্ট চালু করা হয়েছে।",
       "deactivated": "প্রমোট/ডিমোট অ্যালার্ট বন্ধ করা হয়েছে।"
     },
@@ -513,7 +600,8 @@
       "desc": "ব্যবহারকারী বা গ্রুপের প্রোফাইল পিকচার এবং অতিরিক্ত তথ্য (যেমন, সম্পর্কে, স্ট্যাটাস) প্রদর্শন করে।"
     },
     "gjid": {
-      "desc": "সমস্ত গ্রুপ JID এবং তাদের গ্রুপ নাম তালিকা করুন।"
+      "desc": "সমস্ত গ্রুপ JID এবং তাদের গ্রুপ নাম তালিকা করুন।",
+      "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
       "usage": "উদাহরণ: qr test  OR  একটি QR ছবিতে রিপ্লাই করুন qr দিয়ে",
@@ -540,7 +628,7 @@
     "getschedule": {
       "desc": "নির্দিষ্ট চ্যাটের জন্য সমস্ত সময়সূচী করা মেসেজ পুনরুদ্ধার করুন।",
       "not_found": "কোন সময়সূচী করা মেসেজ নেই।",
-      "time": "সময় : {0}"
+      "time": "সময় : {0}"
     },
     "delschedule": {
       "usage": "> উদাহরণ:\n- delschedule 9198765431@s.whatsapp.net, 8-8-10-10\n- delschedule 9198765431@s.whatsapp.net\n- delschedule all",
@@ -561,14 +649,24 @@
       "reply_required": "স্ট্যাটাস সময়সূচী করতে একটি মেসেজ রিপ্লাই করুন।",
       "invalid": "অবৈধ ফরম্যাট। প্রদত্ত উদাহরণগুলির মধ্যে একটি অনুসরণ করুন।",
       "scheduled": "_সফলভাবে সময়সূচী করা হয়েছে_ {0} _এ পাঠানোর জন্য।_",
-      "list": "সময়সূচী করা স্ট্যাটাস তালিকা:",
+      "list": "সময়সূচী করা স্ট্যাটাস তালিকা:",
       "deleted": "সময়সূচী মুছে ফেলা হয়েছে।"
     },
     "antispam": {
-      "usage": "ব্যবহার: antispam on | off",
-      "desc": "গ্রুপের জন্য AntiSpam ফিচার সক্রিয় বা নিষ্ক্রিয় করুন।",
-      "activated": "AntiSpam সক্রিয় করা হয়েছে।",
-      "deactivated": "AntiSpam নিষ্ক্রিয় করা হয়েছে।"
+      "desc": "Manage antispam protection with configurable levels",
+      "usage": "Use: antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *Antispam Status*\n\n🔴 Disabled\n\nUse `antispam on` to enable protection",
+      "info_status": "📊 *Antispam Status*\n\n{status}\nLevel: {level}\nAction: {action}",
+      "deactivated": "⚠️ *Antispam Protection Disabled*\n\nSpam detection is now OFF",
+      "activated": "✅ *Antispam Protection Enabled*\n\nLevel: {level} ({description})\nAction: {action}",
+      "level_set": "✅ *Level Changed*\n\nNew level: {level}",
+      "action_set": "✅ *Action Changed*\n\nSpammers will be: {action_desc}",
+      "invalid_level": "❌ Invalid level. Use: low, medium, high",
+      "help": "📖 *Antispam Help*\n\n*Commands:*\n• `antispam on` - Enable (default: medium)\n• `antispam off` - Disable\n• `antispam <low/medium/high>` - Change sensitivity\n• `antispam <warn/delete/kick>` - Change action\n• `antispam info` - View current settings\n\n*Levels:*\n• Low - Relaxed (active groups)\n• Medium - Balanced (recommended)\n• High - Strict (problem groups)",
+      "spam_warning": "⚠️ @{mention} Stop spamming!",
+      "action_warn": "warned (not kicked)",
+      "action_delete": "messages deleted only",
+      "action_kick": "kicked from group"
     },
     "sticker": {
       "desc": "একটি ছবি বা ভিডিওকে স্টিকার হিসেবে রূপান্তর করুন। একটি ছবি বা ভিডিও মেসেজ রিপ্লাই করুন স্টিকার তৈরি করতে।",
@@ -599,8 +697,8 @@
       "desc": "আপনার পছন্দ অনুযায়ী গ্রুপের সদস্যদের ট্যাগ করুন। 'all' ব্যবহার করে প্রতিটি সদস্যকে উল্লেখ করুন, 'admin' শুধুমাত্র গ্রুপ অ্যাডমিনদের উল্লেখ করুন, 'notadmin' অ্যাডমিন নয় এমন সদস্যদের উল্লেখ করুন, বা উল্লেখের সাথে একটি কাস্টম মেসেজ প্রদান করুন।"
     },
     "tictactoe": {
-      "usage": "উদাহরণ: tictactoe <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end",
-      "desc": "একজন প্রতিপক্ষের বিরুদ্ধে টিকট্যাকটো খেলুন। একজন ব্যবহারকারীকে চ্যালেঞ্জ করতে তাদের উল্লেখ করুন, তাদের বার্তার উত্তর দিন, বা তাদের JID উল্লেখ করুন। 'tictactoe end' ব্যবহার করে খেলা শেষ করুন এবং 'tictactoe restart <opponent_jid>' ব্যবহার করে নতুন প্রতিপক্ষের সাথে আবার শুরু করুন।",
+      "usage": "উদাহরণ: tictactoe <opponent_jid> OR tictactoe normal <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end\nডিফল্ট মোড ইনফিনিট, নরমাল মোডের জন্য 'tictactoe normal' ব্যবহার করুন।",
+      "desc": "একজন প্রতিপক্ষের বিরুদ্ধে টিকট্যাকটো খেলুন। একজন ব্যবহারকারীকে চ্যালেঞ্জ করতে তাদের উল্লেখ করুন, তাদের বার্তার উত্তর দিন, বা তাদের JID উল্লেখ করুন। 'tictactoe end' ব্যবহার করে খেলা শেষ করুন এবং 'tictactoe restart <opponent_jid>' ব্যবহার করে নতুন প্রতিপক্ষের সাথে আবার শুরু করুন। ডিফল্ট মোড ইনফিনিট, নরমাল মোড ব্যবহার করতে 'tictactoe normal' ব্যবহার করুন।",
       "choose_opponent": "একজন প্রতিপক্ষ নির্বাচন করতে একটি বার্তার উত্তর দিন বা একজন ব্যবহারকারীকে উল্লেখ করুন। আপনি নিজের বিরুদ্ধে খেলতে পারবেন না।",
       "game_ended": "খেলা শেষ।",
       "game_restarted": "নতুন প্রতিপক্ষের সাথে খেলা আবার শুরু হয়েছে।",
@@ -609,7 +707,9 @@
       "already_occupied": "_ইতিমধ্যে দখলকৃত_",
       "current_player": "বর্তমান খেলোয়াড়",
       "game_finish": "খেলা শেষ 🏁",
-      "winner": "বিজয়ী"
+      "winner": "বিজয়ী",
+      "restart": "Restart Game",
+      "header": "---Tic Tac Toe---"
     },
     "tiktok": {
       "usage": "ব্যবহার: tiktok <TikTok URL> (বা URL সহ একটি বার্তার উত্তর দিন)",
@@ -678,15 +778,31 @@
       "usage": "উদাহরণ: warn @user OR warn reset @user. আপনি একজন ব্যবহারকারীর বার্তার উত্তর দিয়ে 'warn' বা 'warn reset' টাইপ করতে পারেন।",
       "desc": "গ্রুপ চ্যাটে একজন ব্যবহারকারীকে সতর্ক করুন। এই কমান্ড ব্যবহারকারীর সতর্কতা সংখ্যা বৃদ্ধি করে। যদি সংখ্যা সীমা অতিক্রম করে, তাহলে ব্যবহারকারীকে গ্রুপ থেকে বের করে দেওয়া হবে। 'warn reset' ব্যবহার করে একজন ব্যবহারকারীর সতর্কতা পরিষ্কার করুন।",
       "reset_usage": "উদাহরণ: warn reset @user (বা একজন ব্যবহারকারীর বার্তার উত্তর দিয়ে 'warn reset' টাইপ করুন)।",
-      "cannot_remove_admin": "আমি একজন অ্যাডমিন সরাতে পারব না।"
+      "cannot_remove_admin": "আমি একজন অ্যাডমিন সরাতে পারব না।",
+      "kick_default": "{0} has been kicked for exceeding warn limit.",
+      "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
-      "usage": "উদাহরণ:\n- wcg start (শব্দ চেইন গেম জোর করে শুরু করুন)\n- wcg end (বর্তমান খেলা শেষ করুন)\n- wcg <word> (শব্দ চেইন চালিয়ে খেলুন)",
-      "desc": "শব্দ চেইন গেম: শব্দ চেইন চালিয়ে একটি শব্দ প্রদান করে অংশগ্রহণ করুন। 'wcg start' ব্যবহার করে একটি নতুন খেলা শুরু করুন বা 'wcg end' ব্যবহার করে বর্তমান খেলা বন্ধ করুন।"
+      "usage": "উদাহরণ:\n- wcg start (শব্দ চেইন গেম জোর করে শুরু করুন)\n- wcg end (বর্তমান খেলা শেষ করুন)\nডিফল্ট মোড ইজি।",
+      "desc": "শব্দ চেইন গেম: একটি শব্দ জমা দিয়ে শব্দ চেইন চালিয়ে যান। গেমটি শুরু করতে 'wcg start' এবং খেলা শেষ করতে 'wcg end' ব্যবহার করুন।",
+      "game_ends": "খেলা শেষ",
+      "already_used": "_এই শব্দটি ইতিমধ্যে ব্যবহার করা হয়েছে!_",
+      "not_starting_with": "_{0} দিয়ে শুরু হচ্ছে না_ {1}",
+      "length_limit": "_শব্দের দৈর্ঘ্য {0} এর কম_",
+      "not_in_list": "_এই শব্দটি আমার তালিকায় নেই_",
+      "turn_info": "🎲টার্ন : @{0}\n🙌পরবর্তী : @{1}\n🆎{2} দিয়ে শুরু হওয়া একটি শব্দ বলুন (কমপক্ষে {3} টি অক্ষর)\n🏆প্লেয়ার বাকি : {4}/{5}\n⏳ উত্তর দেওয়ার জন্য আপনার হাতে *{6}* সেকেন্ড আছে\n📝মোট শব্দ : {7}",
+      "timeout": "সময় শেষ @{0}! আপনি খেলা থেকে আউট! 🚫",
+      "winner": "@{0} গেমে জিতেছে 🏆\nশব্দ : *{1}*\nদীর্ঘতম শব্দ : *{2} ({3})* @{4} দ্বারা 📚\nসময় : *{5}* ⏱️",
+      "joined": "@{0} যোগদান করেছেন 👏",
+      "starting": "🎮 গেম শুরু হচ্ছে...\n👥 ২ বা তার বেশি প্লেয়ার প্রয়োজন\n⏳ যোগদান করার জন্য আপনার হাতে ৬০ সেকেন্ড সময় আছে ⏳\n🧩 মোড {0}",
+      "starts_in": "🎮 গেমটি {0} সেকেন্ডের মধ্যে শুরু হবে ⏳\nখেলার জন্য *join* টাইপ করুন 🙋‍♂️🙋‍♀️\n🧩 মোড {1}{2}",
+      "players_count": "\n\n👥 {0} জন প্লেয়ার যোগ করেছেন।",
+      "terminated": "_গেম শুরু করার জন্য পর্যাপ্ত প্লেয়ার নেই। খেলা বাতিল করা হলো।_",
+      "mode_update": "_WCG মোড {0}-এ আপডেট করা হয়েছে_"
     },
     "wrg": {
-      "usage": "উদাহরণ:\n- wrg start (র্যান্ডম শব্দ গেম জোর করে শুরু করুন)\n- wrg end (বর্তমান খেলা শেষ করুন)\n- wrg <word> (একটি শব্দ জমা দিয়ে খেলুন)",
-      "desc": "র্যান্ডম শব্দ গেম: একটি র্যান্ডম প্রম্পটের প্রতিক্রিয়ায় শব্দ জমা দিয়ে খেলুন। 'wrg start' ব্যবহার করে একটি নতুন খেলা শুরু করুন বা 'wrg end' ব্যবহার করে খেলা শেষ করুন।"
+      "usage": "উদাহরণ:\n- wrg start (র্যান্ডম শব্দ গেম জোর করে শুরু করুন)\n- wrg hard (হার্ড মোডে শুরু করুন)\n- wrg easy (ইজি মোডে শুরু করুন)\n- wrg end (বর্তমান খেলা শেষ করুন)",
+      "desc": "র্যান্ডম শব্দ গেম: একটি এলোমেলো প্রম্পটের বিপরীতে শব্দ জমা দিয়ে খেলায় অংশ নিন। নতুন গেম শুরু করতে 'wrg start' বা শেষ করতে 'wrg end' ব্যবহার করুন।"
     },
     "yts": {
       "usage": "উদাহরণ: yts baymax",
@@ -716,11 +832,62 @@
       "updated": "বট সফলভাবে আপডেট করা হয়েছে!"
     },
     "antigm": {
-      "usage": "> Usage:\n- antigm <on|off> — Enable or disable anti group mention\n- antigm <delete|warn|kick> — Set action when someone mentions the group\n- antigm ignore <jid,jid,jid,...> — Ignore anti group mention from specific groups",
-      "action": "Action updated: group mentions will now result in *{0}*.",
-      "filter": "Ignore JIDs updated for anti group mention.",
-      "enabled": "Anti group mention has been enabled.",
-      "disabled": "Anti group mention has been disabled."
+      "usage": "> ব্যবহার:\n- antigm on | off — গ্রুপ মেনশন বিরোধী চালু বা বন্ধ করুন\n- antigm delete | warn | kick — কেউ গ্রুপ মেনশন করলে অ্যাকশন সেট করুন\n- antigm ignore jid,jid,... — নির্দিষ্ট গ্রুপ থেকে গ্রুপ মেনশন বিরোধী উপেক্ষা করুন",
+      "action": "অ্যাকশন আপডেট করা হয়েছে: গ্রুপ মেনশন এখন *{0}* হবে।",
+      "filter": "গ্রুপ মেনশন বিরোধীর জন্য উপেক্ষা করা JID আপডেট করা হয়েছে।",
+      "enabled": "গ্রুপ মেনশন বিরোধী চালু করা হয়েছে।",
+      "disabled": "গ্রুপ মেনশন বিরোধী বন্ধ করা হয়েছে।"
+    },
+    "reminder": {
+      "desc": "Google ক্যালেন্ডারে একটি অনুস্মারক যোগ করুন (প্রাকৃতিক ভাষা সমর্থিত)।",
+      "usage": "*অনুম্মারক কমান্ড ব্যবহার:*\n\n- reminder <text> (ইভেন্ট যোগ করুন)\n- reminder list (আসন্ন ইভেন্ট দেখুন)\n- reminder del <id> (ইভেন্ট ডিলিট করুন)\n- উদাহরণ: `reminder tomorrow at 10am meeting` ",
+      "success": "*অনুস্মারক যোগ করা হয়েছে!*\n\n*ইভেন্ট:* {0}\n*সময়:* {1}\n*লিঙ্ক:* {2}",
+      "list": "*আসন্ন অনুস্মারক:*\n\n{0}",
+      "list_empty": "কোন আসন্ন অনুস্মারক পাওয়া যায়নি।",
+      "deleted": "অনুস্মারক সফলভাবে মুছে ফেলা হয়েছে!",
+      "invalid_id": "অবৈধ অনুস্মারক আইডি।",
+      "auth_required": "*অথেনটিফিকেশন প্রয়োজন:*\n\nবটটিকে অথোরাইজ করতে \"gauth\" ব্যবহার করুন।",
+      "time": "সময়",
+      "id": "আইডি",
+      "short_id_info": "\n\n*দ্রষ্টব্য:* মুছে ফেলার কমান্ডের জন্য আইডির প্রথম ২-৪ টি অক্ষর প্রবেশ করলেই হবে।"
+    },
+    "gauth": {
+      "desc": "YouTube বয়স-নিষেধাজ্ঞা, Google Drive, ক্যালেন্ডার এবং টাস্কের মতো বৈশিষ্ট্যগুলির জন্য Google API প্রমাণীকরণ পরিচালনা করুন।",
+      "usage": "*Google Auth কমান্ডসমূহ:*\\n\\n- `.gauth auth` — প্রমাণীকরণ প্রক্রিয়া শুরু করুন।\\n- `.gauth code <url_or_code>` — প্রমাণীকরণ কোড যাচাই করুন।\\n- `.gauth import` — `credentials.json` ইমপোর্ট করুন (ফাইলটিতে রিপ্লাই দিন)।\\n- `.gauth status` — বর্তমান প্রমাণীকরণ স্ট্যাটাস চেক করুন।\\n- `.gauth logout` — এই সেশনের জন্য ক্রেডেনশিয়াল এবং টোকেন মুছে ফেলুন।\\n\\n*দ্রষ্টব্য:* সাধারণ YouTube বৈশিষ্ট্যগুলির জন্য Google Auth ঐচ্ছিক কিন্তু বয়স-নিবন্ধিত ভিডিও এবং Google Drive/Calendar/Tasks ইন্টিগ্রেশনের জন্য প্রয়োজনীয়।",
+      "prompt": "*Google Authentication Setup Guide:*\n\n১. *প্রকল্প তৈরি করুন:* https://console.cloud.google.com/ এ যান, \"Select a project\" > \"New Project\" এ ক্লিক করুন, নাম দিন \"Levanter\" এবং \"Create\" ক্লিক করুন।\n২. *APIs চালু করুন:* \"APIs & Services\" > \"Library\" এ যান। \"Google Drive API\" , \"Google Calendar API\" এবং \"Google Tasks API\" উভয়ই অনুসন্ধান করুন এবং চালু করুন।\n৩. *OAuth Consent:* \"APIs & Services\" > \"OAuth consent screen\" এ যান। \"External\" নির্বাচন করুন, প্রয়োজনীয় ক্ষেত্রগুলি পূরণ করুন এবং \"Audience\" সেকশনে আপনার ইমেলটি \"Test users\" এ যোগ করুন (বাধ্যতামূলক)।\n৪. *Credentials:* \"APIs & Services\" > \"Credentials\" এ যান। \"Create Credentials\" > \"OAuth client ID\" এ ক্লিক করুন। অ্যাপ্লিকেশন টাইপ হিসেবে \"Desktop app\" নির্বাচন করুন, নাম দিন এবং \"Create\" ক্লিক করুন।\n৫. *ডাউনলোড:* আপনার নতুন Client ID এর পাশে ডাউনলোড (JSON) আইকনে ক্লিক করুন। এটি সেভ করুন এবং ফাইলে রিপ্লাই দিয়ে `.gauth import` ব্যবহার করুন।\n৬. *অথোরাইজ:* এখন অথোরাইজ করতে নিচের লিঙ্কে ক্লিক করুন:\n{0}\n\n৭. *সম্পন্ন:* লগ ইন করুন, \"Unverified app\" সতর্কবার্তা গ্রহণ করুন (\"Advanced\" > \"Go to Levanter\" ক্লিক করুন), রিডাইরেক্টের পর অ্যাড্রেস বার থেকে সম্পূর্ণ URL কপি করুন এবং পাঠান:\n`.gauth code <copied_url>`",
+      "success": "অথেনটিফিকেশন সফল হয়েছে!",
+      "import_success": "`credentials.json` সফলভাবে ইমপোর্ট করা হয়েছে! এখন অথরোইজ করতে `.gauth auth` ব্যবহার করুন।",
+      "import_reply": "দয়া করে একটি `credentials.json` ফাইলে রিপ্লাই দিন।",
+      "status_auth": "*স্ট্যাটাস:* সেশনের জন্য অথেনটিকেটেড।",
+      "status_not_auth": "*স্ট্যাটাস:* সেশনের জন্য অথেনটিকেটেড নয়। `.gauth auth` ব্যবহার করুন।",
+      "logout": "সেশনের জন্য Google Auth ডেটা মুছে ফেলা হয়েছে এবং লগ আউট করা হয়েছে।",
+      "failed": "*ব্যর্থ হয়েছে:* {0}"
+    },
+    "gdrive": {
+      "desc": "Google Drive অপারেশন (upload, list, delete)।",
+      "upload_success": "আপলোড সম্পন্ন হয়েছে!",
+      "uploading": "ড্রাইভে মিডিয়া আপলোড করা হচ্ছে...",
+      "not_authorized": "অনুমোদিত নয়। \"backup auth\" ব্যবহার করুন।",
+      "list": "*Google Drive ফাইলসমূহ:*\n\n{0}",
+      "list_empty": "Levanter ফোল্ডারে কোন ফাইল পাওয়া যায়নি।",
+      "deleted": "ফাইল সফলভাবে মুছে ফেলা হয়েছে!",
+      "invalid_id": "দয়া করে একটি বৈধ ফাইল আইডি প্রদান করুন।",
+      "error": "*এরর:* {0}",
+      "url_prompt": "দয়া করে একটি বৈধ URL প্রদান করুন, একটি মিডিয়া মেসেজ ট্যাগ করুন, অথবা সাব-কমান্ড ব্যবহার করুন: list, del <id>, dl <id>।\nউদাহরণ: `gupload list`",
+      "short_id_info": "\n\n*দ্রষ্টব্য:* ডাউনলোড বা মুছে ফেলার কমান্ডের জন্য আপনাকে আইডির প্রথম ২-৪ টি অক্ষর প্রবেশ করতে হবে।"
+    },
+    "task": {
+      "desc": "আপনার Google Tasks পরিচালনা করুন",
+      "usage": "ব্যবহার: task <list | lists | switch <নাম> | add <টেক্সট> | del <আইডি> | done <আইডি> | update <আইডি> <টেক্সট> | <টেক্সট>>",
+      "added": "কাজ যোগ করা হয়েছে: *{0}*\nতারিখ: {1}",
+      "deleted": "কাজটি মুছে ফেলা হয়েছে।",
+      "updated": "কাজ *{0}* এখন *{1}* হিসেবে চিহ্নিত",
+      "list_empty": "কোনো কাজ পাওয়া যায়নি।",
+      "list_header": "📝 *কাজসমূহ ({0})*:\n",
+      "not_found": "কাজটি পাওয়া যায়নি।",
+      "auth_required": "দয়া করে *.gauth auth* ব্যবহার করে প্রমাণীকরণ করুন এবং Google Tasks অনুমতি দিন।",
+      "list_lists": "📝 *কাজের তালিকা*:\n",
+      "switched": "ডিফল্ট কাজের তালিকা এখন *{0}*।"
     }
   }
 }

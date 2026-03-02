@@ -11,7 +11,7 @@
     "reconnect": "[{0}] Menghubungkan ulang...({1})",
     "reconnect_after": "[{0}] Menghubungkan ulang setelah 1 menit",
     "another_login": "[{0}] Sesi login di perangkat lain.",
-    "error_message": "```---LAPORAN ERROR---\n\nVersi : {0}\nPesan : {1}\nError   : {2}\nJid     : {3}\nPerintah : {4}\nPlatform : {5}```\n\n```-----``` *Dibuat oleh LyFE dengan ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "           Pesan dihapus",
     "install_external_plugin": "[{0}] Menginstal plugin eksternal...",
     "installed_external_plugin": "[{0}] Plugin Eksternal Terinstal",
@@ -20,18 +20,39 @@
     "plugins_installed": "[{0}] Plugin Terinstal",
     "plugin_install_error": "[{0}] Error saat menginstal {1}, menghapus plugin",
     "plugin_not_found": "[{0}] plugin {1} tidak ditemukan (404), menghapus plugin",
-    "group_cmd": "Perintah ini hanya tersedia di grup."
+    "group_cmd": "Perintah ini hanya tersedia di grup.",
+    "labels": {
+      "sudo": "SUDO",
+      "auto_read": "AUTO READ MSG",
+      "auto_status": "AUTO STATUS VIEW",
+      "auto_reject": "AUTO REJECT CALL",
+      "always_online": "ALWAYS ONLINE",
+      "anti_delete": "ANTI DELETE MSG",
+      "auto_update": "AUTO UPDATE BOT"
+    },
+    "promoted": "promoted",
+    "demoted": "demoted",
+    "file_size_error": "Size is {0}\n\n{1}",
+    "missing_jid": "missing jids",
+    "no_contacts": "not found contacts, please add contacts",
+    "reaction_not_enabled": "Reaction not enabled",
+    "reaction_not_allowed": "this reaction not allowed",
+    "metadata_fetch_failed": "failed to fetch metadata",
+    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
+    "screenshot_error": "an error occured",
+    "id_missing": "id missing",
+    "not_on_whatsapp": "{0} is not on whatsapp.",
+    "yt_auth_required": "Gagal mengunduh: YouTube memerlukan autentikasi.\\n\\n*Solusi:*\\n1. *Google Auth (Direkomendasikan):* Gunakan `.gauth auth` untuk menautkan akun Google Anda.\\n2. *YT_COOKIE:* Atur variabel lingkungan `YT_COOKIE`.\\nWiki: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}"
   },
   "plugins": {
     "common": {
-      "reply_to_message": "Balas ke pesan",
-      "not_admin": "Saya bukan admin.",
       "reply_to_image": "Balas ke gambar",
       "update": "_Pengaturan berhasil diperbarui! Preferensi Anda telah disimpan dan sekarang aktif._"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ Pengguna : {1}\n│ Waktu : {2}\n│ Hari : {3}\n│ Tanggal : {4}\n│ Versi : {5}\n│ Plugin : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
-      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ Pengguna : {1}\n┃❃│ Waktu : {2}\n┃❃│ Hari : {3}\n┃❃│ Tanggal : {4}\n┃❃│ Versi : {5}\n┃❃│ Plugin : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ Pengguna : {1}\n┃❃│ Waktu : {2}\n┃❃│ Hari : {3}\n┃❃│ Tanggal : {4}\n┃❃│ Versi : {5}\n┃❃│ Plugin : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
+      "disabled": "disabled"
     },
     "afk": {
       "example": "> *Cara Pakai AFK:*\n- Set AFK: *afk [alasan]*\n- Contoh: *afk Saya sibuk* Terakhir terlihat #lastseen yang lalu\n- Mengirim pesan otomatis menghapus status AFK\n- Matikan AFK: *afk off*",
@@ -43,28 +64,61 @@
       "desc": "Menampilkan pesan status hidup bot dengan teks kustom opsional."
     },
     "antifake": {
-      "example": "*Status Antifake:* {0}\n\n> *Contoh Penggunaan:*\n- *antifake list* - Lihat kode negara\n- *antifake !91,1* - Izinkan/Tidak izinkan kode negara tertentu\n- *antifake on | off* - Aktifkan/Nonaktifkan antifake",
+      "example": "*Status Antifake:* {0}\n\n> *Contoh Penggunaan:*\n- *antifake list* - Lihat kode negara\n- *antifake add 91,1* - Tambahkan kode negara ke daftar izin\n- *antifake remove 91,1* - Hapus kode negara dari daftar izin\n- *antifake on | off* - Aktifkan/Nonaktifkan antifake",
       "desc": "Aktifkan atau konfigurasi anti-nomor palsu",
       "not": "Tidak ada kode negara yang ditampilkan.",
       "status": "Antifake sekarang *{0}*.",
-      "update": "> Antifake Diperbarui\n*Diizinkan:* {0}\n*Tidak Diizinkan:* {1}"
+      "update": "> Antifake Diperbarui\n*Diizinkan:* {0}\n*Tidak Diizinkan:* {1}",
+      "allow_prompt": "*Please provide country codes to allow (whitelist mode)*\n_Example: antifake allow 1,91_",
+      "disallow_prompt": "*Please provide country codes to disallow (blacklist mode)*\n_Example: antifake disallow 92,93_",
+      "remove_prompt": "*Please provide country codes to remove*\n_Example: antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Blacklist Mode. Use `antifake clear` first to switch to Whitelist Mode._",
+      "mode_conflict_blacklist": "*⚠️ Cannot mix modes!*\n\n_You are currently in Whitelist Mode. Use `antifake clear` first to switch to Blacklist Mode._",
+      "whitelist_success": "*✅ Allowed country codes (Whitelist Mode):*\n{0}\n\n_These codes will be allowed, all others will be blocked._",
+      "blacklist_success": "*🚫 Disallowed country codes (Blacklist Mode):*\n{0}\n\n_These codes will be blocked, all others will be allowed._",
+      "removed": "*Removed country codes:*\n{0}",
+      "cleared": "*🗑️ Antifake list cleared and disabled*",
+      "whitelist_mode": "🟢 Whitelist Mode (Allow Only)",
+      "blacklist_mode": "🔴 Blacklist Mode (Block Only)",
+      "enabled": "aktif",
+      "disabled": "tidak aktif"
     },
     "antilink": {
       "desc": "Aktifkan atau konfigurasi anti-link",
       "disable": "_Antilink sudah dinonaktifkan._",
-      "antilink_notset": "Antilink belum dikonfigurasi.",
+      "antilink_notset": "Antilink dikonfigurasi untuk memblokir semua tautan (tidak ada daftar URL yang disetel). Gunakan 'antilink allow' atau 'antilink disallow' untuk mengonfigurasi URL tertentu.",
       "status": "Antilink sekarang *{0}*.",
-      "info": "`> Status Antilink: {0}\n*URL yang Diizinkan:* {1}\n *Aksi :* {2}",
+      "info": "> Status Antilink: {0}\n*URL yang Diizinkan:* {1}\n *Aksi :* {2}",
       "action_invalid": "*Aksi yang dimasukkan tidak valid.*",
       "action_update": "Aksi Antilink diperbarui menjadi: *{0}*",
       "update": "> Antilink Diperbarui\n*Diizinkan:* {0}\n*Tidak Diizinkan:* {1}",
-      "example": "Status Antilink: *{0}*\n\n> Contoh Penggunaan:\n- antilink info - Lihat pengaturan saat ini\n- antilink whatsapp.com - Izinkan URL tertentu\n- antilink on | off - Aktifkan/Nonaktifkan antilink\n- antilink action/<kick | warn | null> - Atur aksi untuk link"
+      "enabled": "aktif",
+      "disabled": "tidak aktif",
+      "example": "Status Antilink: *{0}*\n\n> Contoh Penggunaan:\n- antilink list - Lihat pengaturan saat ini\n- antilink allow whatsapp.com - Izinkan URL tertentu\n- antilink disallow facebook.com - Larang URL tertentu\n- antilink clear allow - Clear allowed URLs\n- antilink clear disallow - Clear disallowed URLs\n- antilink on | off - Aktifkan/Nonaktifkan antilink\n- antilink kick | warn | null - Atur aksi untuk link",
+      "allow_prompt": "*Please provide a URL to allow.*",
+      "no_new_urls": "*No new URLs to add.* All URLs already exist in the list.",
+      "urls_updated": "*Allowed URLs updated*\n\nAdded: {0}\nTotal: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "disallow_prompt": "*Please provide a URL to disallow.*",
+      "no_disallowed_urls": "*No new URLs to disallow.* All URLs are already disallowed.",
+      "disallowed_updated": "*Disallowed URLs updated*\n\nAdded to blocklist: {0}\nTotal blocked: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "settings_cleared": "*Antilink settings cleared.*",
+      "allowed_cleared": "*Allowed URLs cleared.*",
+      "disallowed_cleared": "*Disallowed URLs cleared.*"
     },
     "antiword": {
       "desc": "Filter kata-kata tertentu di grup chat",
-      "example": "`Status AntiWord: {0}\n> *Contoh Penggunaan:*\n- antiword action/<kick | warn | null>* - Atur aksi untuk pelanggaran\n- antiword on | off - Aktifkan/Nonaktifkan filter kata\n- setvar ANTIWORDS:word1,word2,... - Tentukan kata yang diblokir",
+      "example": "Status AntiWord: {0}\n> *Contoh Penggunaan:*\n- antiword kick | warn | null - Atur aksi untuk pelanggaran\n- antiword on | off - Aktifkan/Nonaktifkan filter kata\n- antiword add word1,word2 - Tambahkan kata ke daftar blokir\n- antiword remove word1,word2 - Hapus kata dari daftar blokir\n- antiword list - Lihat kata yang diblokir",
       "action_update": "Aksi AntiWord diperbarui menjadi: *{0}*",
-      "status": "AntiWord sekarang *{0}*."
+      "status": "AntiWord sekarang *{0}*.",
+      "add_prompt": "*Silakan berikan kata-kata untuk ditambahkan.*",
+      "added": "*Kata-kata ditambahkan:*\n{0}",
+      "remove_prompt": "*Silakan berikan kata-kata untuk dihapus.*",
+      "removed": "*Kata-kata dihapus:*\n{0}",
+      "activated": "diaktifkan",
+      "deactivated": "dinonaktifkan",
+      "no_words": "*Tidak ada kata yang ditetapkan.*",
+      "info": "*Status AntiWord:* {0}\n*Aksi:* {1}\n\n*Kata:* {2}",
+      "cleared": "*Daftar AntiWord dibersihkan.*"
     },
     "apk": {
       "desc": "Unduh APK dari APKMirror",
@@ -158,15 +212,17 @@
     },
     "greetings": {
       "welcome_desc": "Kirim pesan selamat datang ke anggota baru",
-      "welcome_example": "Selamat datang saat ini {0}\n\nUntuk detail lebih lanjut, kunjungi: https://levanter-delta.vercel.app/",
+      "welcome_example": "Selamat datang saat ini *{0}*\n\n> *Contoh Penggunaan:*\n- welcome Hai &mention! Selamat datang di &name - Atur pesan\n- welcome on | off - Aktifkan/Nonaktifkan\n- welcome delete - Hapus pesan\n\n> *Placeholder:*\n- &mention - Sebut anggota baru\n- &name - Nama grup\n- &desc - Deskripsi grup\n- &size - Jumlah anggota\n- &pp - Foto profil anggota\n\n> *Media:* Balas ke gambar/video ATAU sertakan URL dalam pesan\n\nUntuk detail lebih lanjut: https://levanter.site/",
       "welcome_enable": "_Selamat datang sekarang diaktifkan_",
       "welcome_disable": "_Selamat datang sekarang dinonaktifkan_",
       "welcome_delete": "_Pesan selamat datang dihapus_",
+      "welcome_not_set": "_Silakan atur pesan selamat datang terlebih dahulu!_\n\n> *Contoh:*\nwelcome Hai &mention! Selamat datang di &name\n\nKemudian gunakan: welcome on",
       "goodbye_desc": "Kirim pesan selamat tinggal ke anggota",
-      "goodbye_example": "Selamat tinggal saat ini {0}\n\nUntuk detail lebih lanjut, kunjungi: https://levanter-delta.vercel.app/",
+      "goodbye_example": "Selamat tinggal saat ini *{0}*\n\n> *Contoh Penggunaan:*\n- goodbye Sampai jumpa &mention! Terima kasih - Atur pesan\n- goodbye on | off - Aktifkan/Nonaktifkan\n- goodbye delete - Hapus pesan\n\n> *Placeholder:*\n- &mention - Sebut anggota yang pergi\n- &name - Nama grup\n- &desc - Deskripsi grup\n- &size - Jumlah anggota\n- &pp - Foto profil anggota\n\n> *Media:* Balas ke gambar/video ATAU sertakan URL dalam pesan\n\nUntuk detail lebih lanjut: https://levanter.site/",
       "goodbye_enable": "_Selamat tinggal sekarang diaktifkan_",
       "goodbye_disable": "_Selamat tinggal sekarang dinonaktifkan_",
-      "goodbye_delete": "_Pesan selamat tinggal dihapus_"
+      "goodbye_delete": "_Pesan selamat tinggal dihapus_",
+      "goodbye_not_set": "_Silakan atur pesan selamat tinggal terlebih dahulu!_\n\n> *Contoh:*\ngoodbye Sampai jumpa &mention! Terima kasih telah bersama kami\n\nKemudian gunakan: goodbye on"
     },
     "groq": {
       "example": "*Contoh:* groq Hai\n\nAnda bisa mengatur variabel lingkungan berikut:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nUntuk detail lebih lanjut, kunjungi: https://console.groq.com/keys",
@@ -230,7 +286,9 @@
     },
     "common_members": {
       "desc": "Tampilkan atau hapus anggota yang sama di dua grup atau lebih",
-      "found": "Ditemukan 0 anggota yang sama."
+      "found": "Ditemukan 0 anggota yang sama.",
+      "common_usage": "*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.",
+      "ginfo_usage": "*Example : info group_invte_link*"
     },
     "insta": {
       "usage": "Contoh: insta <URL Instagram>",
@@ -358,7 +416,7 @@
       "usage": "Contoh: mention on | off | get\n(Balas ke pesan untuk menargetkan pengguna tertentu.)",
       "desc": "Konfigurasi dan kelola fitur mention untuk balasan otomatis.",
       "not_activated": "Balasan ke mention tidak diaktifkan.",
-      "current_status": "Mention adalah {0}. Untuk detail, kunjungi: https://levanter-delta.vercel.app/",
+      "current_status": "Mention adalah {0}. Untuk detail, kunjungi: https://levanter.site/",
       "activated": "Balasan ke mention diaktifkan.",
       "deactivated": "Balasan ke mention dinonaktifkan.",
       "updated": "Pengaturan mention diperbarui."
@@ -387,7 +445,8 @@
     "msgs": {
       "desc": "Tampilkan jumlah pesan grup untuk setiap anggota, termasuk total individu dan durasi terakhir terlihat.",
       "msg_init": "\n*Nomor :* {0}\n*Nama :* {1}\n*Total Pesan :* {2}\n",
-      "msg_last": "*Terakhir Terlihat :* {0} yang lalu\n"
+      "msg_last": "*Terakhir Terlihat :* {0} yang lalu\n",
+      "no_activity": "No activity recorded yet."
     },
     "reset": {
       "usage": "Contoh: reset all ATAU reset <balas/sebutkan>",
@@ -400,6 +459,21 @@
       "desc": "Identifikasi atau hapus anggota yang tidak aktif berdasarkan jumlah pesan atau durasi tidak aktif. Tambahkan 'kick' untuk menghapus anggota.",
       "inactives": "_Total anggota tidak aktif adalah : {0}_",
       "removing": "_Menghapus {0} anggota tidak aktif dalam 7 detik_"
+    },
+    "weather": {
+      "desc": "weather info",
+      "usage": "*Example : weather delhi*",
+      "not_found": "_{0} not found_",
+      "report": "*Name :* {0}\n*Country :* {1}\n*Weather :* {2}\n*Temp :* {3}°\n*Feels Like :* {4}°\n*Humidity :* {5}%\n*Visibility  :* {6}m\n*Wind* : {7}m/s {8}\n*Sunrise :* {9}\n*Sunset :* {10}"
+    },
+    "y2mate": {
+      "ytv_desc": "Download YouTube video",
+      "ytv_usage": "_Example: ytv url_",
+      "yta_desc": "Download YouTube audio",
+      "yta_usage": "_Example: yta darari/yt url_",
+      "invalid_link": "*Provide a valid YouTube link!*",
+      "no_video": "*No video found*",
+      "no_audio": "_Audio not found._"
     },
     "amute": {
       "usage": "Cara Pakai: amute <jam> <menit>\n- amute on | off\n- amute info\n\nBalas dengan teks untuk mengatur pesan mute",
@@ -427,19 +501,32 @@
       "usage": "> Contoh:\n- zushi ping, stiker\n- Untuk mengatur semua perintah, ketik 'list' dan kemudian balas dengan pesan yang disalin (contoh: zushi pesan_yang_disalin).",
       "desc": "Memungkinkan Anda mengaktifkan perintah tertentu untuk digunakan oleh orang lain di chat.",
       "already_set": "{0} sudah dikonfigurasi.",
-      "allowed": "*perintah yang diizinkan untuk* @{0}\n{1}"
+      "allowed": "*perintah yang diizinkan untuk* @{0}\n{1}",
+      "no_input": "⚠️ Harap sertakan nama perintah\n\n📝 Contoh:\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 Tambahkan beberapa perintah dipisahkan dengan spasi",
+      "duplicates": "❌ Perintah sudah diizinkan: {0}\n\n📋 Perintah yang diizinkan saat ini (Total {1}) :\n{2}\n\n💡 Gunakan .yami untuk melihat semua perintah yang diizinkan\n💡 Gunakan .ope untuk menghapus perintah",
+      "invalid": "⚠️ Tidak ada perintah valid yang ditemukan\n\nMelewati yang tidak valid: {0}\n\n💡 Gunakan .help untuk melihat perintah yang tersedia",
+      "error": "❌ Error: {0}",
+      "success": "✅ Berhasil menambahkan {0} perintah{1} :\n{2}\n\n📊 Total diizinkan: {0} perintah{1} untuk @{3}\n\n💡 Pengguna sekarang dapat menggunakan perintah ini"
     },
     "yami": {
       "usage": "Cukup gunakan: yami",
       "desc": "Tampilkan daftar perintah yang saat ini diizinkan di chat ini.",
-      "not_set": "Belum ada perintah yang diizinkan."
+      "not_set": "Belum ada perintah yang diizinkan.",
+      "no_commands": "📋 Tidak ada perintah yang diizinkan ditemukan\n\n💡 Gunakan .zushi untuk menambahkan perintah\n📝 Contoh: .zushi song video sticker",
+      "list": "📋 Perintah yang diizinkan untuk @{0} :\n\n{1}\n\n📊 Total: {2} perintah{3}\n\n💡 Hapus dengan: .ope <nama perintah>\n💡 Hapus semua: .ope all"
     },
     "ope": {
       "usage": "Contoh: ope ping, stiker ATAU ope all",
       "desc": "Hapus atau batalkan perintah yang diizinkan.",
       "not_found": "Tidak ada perintah yang diizinkan untuk {0}.",
       "all_removed": "Semua perintah yang diizinkan telah dihapus.",
-      "removed": "*perintah yang dihapus untuk* @{0}\n{1}"
+      "removed": "*perintah yang dihapus untuk* @{0}\n{1}",
+      "no_input": "⚠️ Harap sertakan nama perintah yang akan dihapus\n\n📝 Contoh:\n  • .ope song video\n  • .ope all (menghapus semua)\n\n💡 Gunakan .yami untuk melihat perintah yang diizinkan",
+      "not_found_list": "❌ Perintah{0} tidak ditemukan : {1}{2}\n\n💡 Gunakan .yami untuk melihat semua perintah yang diizinkan\n📝 Contoh: .ope song video",
+      "error": "❌ Error: {0}",
+      "no_commands": "⚠️ Tidak ada perintah yang ditemukan untuk pengguna/grup ini\n\n💡 Gunakan .zushi untuk menambahkan perintah terlebih dahulu",
+      "all_success": "✅ Semua perintah berhasil dihapus\n\n💡 Gunakan .zushi untuk menambahkan perintah baru",
+      "success": "✅ {0} perintah{1} berhasil dihapus :\n{2}\n\n📊 Untuk : @{3}\n\n💡 Gunakan .yami untuk melihat perintah yang tersisa\n💡 Gunakan .ope all untuk menghapus semua"
     },
     "pdm": {
       "usage": "Cara Pakai: pdm on | off",
@@ -513,7 +600,8 @@
       "desc": "Tampilkan foto profil dan informasi tambahan (misalnya, tentang, status) dari pengguna atau grup."
     },
     "gjid": {
-      "desc": "Daftar semua JID grup beserta nama grupnya."
+      "desc": "Daftar semua JID grup beserta nama grupnya.",
+      "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
       "usage": "Contoh: qr test  ATAU  balas ke gambar QR dengan qr",
@@ -565,10 +653,20 @@
       "deleted": "Jadwal dihapus."
     },
     "antispam": {
-      "usage": "Cara Pakai: antispam on | off",
-      "desc": "Aktifkan atau nonaktifkan fitur AntiSpam untuk grup.",
-      "activated": "AntiSpam diaktifkan.",
-      "deactivated": "AntiSpam dinonaktifkan."
+      "desc": "Manage antispam protection with configurable levels",
+      "usage": "Use: antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *Antispam Status*\n\n🔴 Disabled\n\nUse `antispam on` to enable protection",
+      "info_status": "📊 *Antispam Status*\n\n{status}\nLevel: {level}\nAction: {action}",
+      "deactivated": "⚠️ *Antispam Protection Disabled*\n\nSpam detection is now OFF",
+      "activated": "✅ *Antispam Protection Enabled*\n\nLevel: {level} ({description})\nAction: {action}",
+      "level_set": "✅ *Level Changed*\n\nNew level: {level}",
+      "action_set": "✅ *Action Changed*\n\nSpammers will be: {action_desc}",
+      "invalid_level": "❌ Invalid level. Use: low, medium, high",
+      "help": "📖 *Antispam Help*\n\n*Commands:*\n• `antispam on` - Enable (default: medium)\n• `antispam off` - Disable\n• `antispam <low/medium/high>` - Change sensitivity\n• `antispam <warn/delete/kick>` - Change action\n• `antispam info` - View current settings\n\n*Levels:*\n• Low - Relaxed (active groups)\n• Medium - Balanced (recommended)\n• High - Strict (problem groups)",
+      "spam_warning": "⚠️ @{mention} Stop spamming!",
+      "action_warn": "warned (not kicked)",
+      "action_delete": "messages deleted only",
+      "action_kick": "kicked from group"
     },
     "sticker": {
       "desc": "Konversi gambar atau video ke stiker. Balas ke pesan gambar atau video untuk membuat stiker.",
@@ -599,8 +697,8 @@
       "desc": "Tag anggota di grup berdasarkan pilihan Anda. Gunakan 'all' untuk menyebut semua anggota, 'admin' untuk menyebut hanya admin grup, 'notadmin' untuk menyebut anggota non-admin, atau berikan pesan kustom untuk dikirim bersama mention."
     },
     "tictactoe": {
-      "usage": "Contoh: tictactoe <jid_lawan> ATAU tictactoe restart <jid_lawan> ATAU tictactoe end",
-      "desc": "Mainkan game TicTacToe melawan lawan. Tantang pengguna dengan menyebutkan mereka, membalas pesan mereka, atau menentukan JID mereka. Gunakan 'tictactoe end' untuk mengakhiri game dan 'tictactoe restart <jid_lawan>' untuk memulai ulang dengan lawan baru.",
+      "usage": "Example: tictactoe <opponent_jid> OR tictactoe normal <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end\nMode default adalah infinite, gunakan 'tictactoe normal' untuk mode normal.",
+      "desc": "Mainkan game TicTacToe melawan lawan. Tantang pengguna dengan menyebutkan mereka, membalas pesan mereka, atau menentukan JID mereka. Gunakan 'tictactoe end' untuk mengakhiri game dan 'tictactoe restart <jid_lawan>' untuk memulai ulang dengan lawan baru. Mode default adalah infinite, gunakan 'tictactoe normal' untuk mode normal.",
       "choose_opponent": "Silakan pilih lawan dengan membalas pesan atau menyebutkan pengguna. Anda tidak bisa bermain melawan diri sendiri.",
       "game_ended": "Game berakhir.",
       "game_restarted": "Game dimulai ulang dengan lawan baru.",
@@ -609,7 +707,9 @@
       "already_occupied": "_Sudah Terisi_",
       "current_player": "pemainSaatIni",
       "game_finish": "Game Selesai 🏁",
-      "winner": "Pemenang"
+      "winner": "Pemenang",
+      "restart": "Restart Game",
+      "header": "---Tic Tac Toe---"
     },
     "tiktok": {
       "usage": "Cara Pakai: tiktok <URL TikTok> (atau balas ke pesan dengan URL)",
@@ -678,15 +778,31 @@
       "usage": "Contoh: warn @user ATAU warn reset @user. Anda juga bisa membalas pesan pengguna dan ketik 'warn' atau 'warn reset'.",
       "desc": "Peringatkan pengguna di grup chat. Perintah ini meningkatkan jumlah peringatan pengguna. Jika jumlahnya melebihi batas, pengguna akan dikeluarkan dari grup. Gunakan 'warn reset' untuk menghapus peringatan pengguna.",
       "reset_usage": "Contoh: warn reset @user (atau balas ke pesan pengguna dan ketik 'warn reset').",
-      "cannot_remove_admin": "Saya tidak bisa menghapus admin."
+      "cannot_remove_admin": "Saya tidak bisa menghapus admin.",
+      "kick_default": "{0} has been kicked for exceeding warn limit.",
+      "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
-      "usage": "Contoh:\n- wcg start (mulai paksa game rantai kata)\n- wcg end (akhiri game saat ini)\n- wcg <kata> (main dengan melanjutkan rantai kata)",
-      "desc": "Game Rantai Kata: Berpartisipasi dengan memberikan kata yang melanjutkan rantai. Gunakan 'wcg start' untuk memulai game baru atau 'wcg end' untuk menghentikan game saat ini."
+      "usage": "Contoh:\n- wcg start (mulai paksa game rantai kata)\n- wcg end (akhiri game saat ini)\nMode default adalah mudah.",
+      "desc": "Game Rantai Kata: Berpartisipasi dengan memberikan kata yang melanjutkan rantai. Gunakan 'wcg start' untuk memulai game baru atau 'wcg end' untuk menghentikan game saat ini.",
+      "game_ends": "Game Ends",
+      "already_used": "_Already Used this Word!_",
+      "not_starting_with": "_Not Starting with {0}_",
+      "length_limit": "_This word length is less than {0}_",
+      "not_in_list": "_This word is not in my words list_",
+      "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Your word must start with *{2}* and include at least *{3}* letters\n🏆Players remaining : {4}/{5}\n⏳You have *{6}s* to answer\n📝Total words : {7}",
+      "timeout": "@{0} ran out of time! They're out! 🚫",
+      "winner": "@{0} Won 🏆\nWords : *{1}*\nLongest word : *{2} ({3})* by @{4} 📚\nTime : *{5}* ⏱️",
+      "joined": "@{0} Joined 👏",
+      "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
+      "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
+      "players_count": "\n\n👥 {0} pemain bergabung.",
+      "terminated": "_Tidak cukup pemain untuk memulai. Game dihentikan._",
+      "mode_update": "_Mode WCG diperbarui ke {0}_"
     },
     "wrg": {
-      "usage": "Contoh:\n- wrg start (mulai paksa game kata acak)\n- wrg end (akhiri game saat ini)\n- wrg <kata> (main dengan mengirimkan kata)",
-      "desc": "Game Kata Acak: Ikuti game di mana Anda mengirimkan kata sebagai respons terhadap prompt acak. Gunakan 'wrg start' untuk memulai game baru atau 'wrg end' untuk mengakhiri game."
+      "usage": "Contoh:\n- wrg start (mulai paksa game kata acak)\n- wrg hard (mulai dalam mode sulit)\n- wrg easy (mulai dalam mode mudah)\n- wrg end (akhiri game saat ini)",
+      "desc": "Game Kata Acak: Terlibat dalam permainan di mana Anda mengirimkan kata-kata sebagai tanggapan terhadap prompt acak. Gunakan 'wrg start' untuk memulai permainan baru atau 'wrg end' untuk menyelesaikan permainan."
     },
     "yts": {
       "usage": "Contoh: yts baymax",
@@ -716,11 +832,62 @@
       "updated": "Bot berhasil diperbarui!"
     },
     "antigm": {
-      "usage": "> Cara Pakai:\n- antigm <on|off> — Aktifkan atau nonaktifkan anti-sebutan grup\n- antigm <delete|warn|kick> — Atur tindakan ketika seseorang menyebut grup\n- antigm ignore <jid,jid,jid,...> — Abaikan anti-sebutan grup dari grup tertentu",
+      "usage": "> Penggunaan:\n- antigm on | off — Aktifkan atau nonaktifkan anti-sebutan grup\n- antigm delete | warn | kick — Atur tindakan ketika seseorang menyebut grup\n- antigm ignore jid,jid,... — Abaikan anti-sebutan grup dari grup tertentu",
       "action": "Tindakan diperbarui: sebutan grup sekarang akan menghasilkan *{0}*.",
       "filter": "JID yang diabaikan diperbarui untuk anti-sebutan grup.",
       "enabled": "Anti-sebutan grup telah diaktifkan.",
       "disabled": "Anti-sebutan grup telah dinonaktifkan."
+    },
+    "reminder": {
+      "desc": "Kelola pengingat Google Calendar.",
+      "usage": "> *Penggunaan Pengingat:*\n- `reminder <teks>` - Setel pengingat baru (mis. 'rapat besok jam 10 pagi')\n- `reminder list` - Daftar semua pengingat\n- `reminder del <id>` - Hapus pengingat",
+      "success": "✅ Pengingat disetel: *{0}* pada {1}",
+      "list": "*Pengingat Anda:*\n\n{0}",
+      "list_empty": "Tidak ada pengingat ditemukan.",
+      "deleted": "Pengingat berhasil dihapus!",
+      "invalid_id": "Harap berikan ID acara yang valid.",
+      "auth_required": "*Otentikasi Diperlukan:*\n\nGunakan \"gauth\" untuk mengotorisasi bot.",
+      "time": "Waktu",
+      "id": "ID",
+      "short_id_info": "\n\n*Catatan:* Anda hanya perlu memasukkan 2-4 karakter pertama dari ID untuk perintah penghapusan."
+    },
+    "gauth": {
+      "desc": "Kelola autentikasi Google API untuk fitur-fitur seperti Pembatasan Usia YouTube, Google Drive, Kalender, dan Tugas.",
+      "usage": "*Perintah Google Auth:*\\n\\n- `.gauth auth` — Mulai proses autentikasi.\\n- `.gauth code <url_or_code>` — Validasi kode autentikasi.\\n- `.gauth import` — Impor `credentials.json` (Balas file tersebut).\\n- `.gauth status` — Periksa status autentikasi saat ini.\\n- `.gauth logout` — Hapus kredensial dan token untuk sesi ini.\\n\\n*Catatan:* Google Auth bersifat opsional untuk fitur YouTube umum tetapi diperlukan untuk video yang dibatasi usia dan integrasi Google Drive/Kalender/Tugas.",
+      "prompt": "*Panduan Penyiapan Autentikasi Google:*\n\n1. *Buat Proyek:* Buka https://console.cloud.google.com/, klik \"Select a project\" > \"New Project\", beri nama \"Levanter\" dan klik \"Create\".\n2. *Aktifkan API:* Buka \"APIs & Services\" > \"Library\". Cari dan aktifkan \"Google Drive API\" , \"Google Calendar API\", dan \"Google Tasks API\".\n3. *Persetujuan OAuth:* Buka \"APIs & Services\" > \"OAuth consent screen\". Pilih \"External\", isi kolom yang diperlukan, dan di bagian \"Audience\", tambahkan email Anda ke \"Test users\" (WAJIB).\n4. *Kredensial:* Buka \"APIs & Services\" > \"Credentials\". Klik \"Create Credentials\" > \"OAuth client ID\". Pilih \"Desktop app\" sebagai jenis aplikasi, beri nama, dan klik \"Create\".\n5. *Unduh:* Di samping ID Klien baru Anda, klik ikon Unduh (JSON). Simpan dan gunakan `.gauth import` dengan membalas file tersebut.\n6. *Otorisasi:* Sekarang klik tautan di bawah ini untuk mengotorisasi:\n{0}\n\n7. *Selesai:* Login, terima peringatan \"Aplikasi tidak diverifikasi\" (Klik \"Advanced\" > \"Go to Levanter\"), salin URL lengkap dari bilah alamat setelah pengalihan, dan kirim:\n`.gauth code <url_yang_disalin>`",
+      "success": "Autentikasi berhasil!",
+      "import_success": "`credentials.json` berhasil diimpor! Sekarang gunakan `.gauth auth` untuk mengotorisasi.",
+      "import_reply": "Harap balas ke file `credentials.json`.",
+      "status_auth": "*Status:* Terautentikasi untuk sesi.",
+      "status_not_auth": "*Status:* Tidak terautentikasi untuk sesi. Gunakan `.gauth auth`.",
+      "logout": "Logout dan data Google Auth dihapus untuk sesi.",
+      "failed": "*Gagal:* {0}"
+    },
+    "gdrive": {
+      "desc": "Operasi Google Drive (unggah, daftar, hapus).",
+      "upload_success": "Unggahan selesai!",
+      "uploading": "Mengunggah media ke Drive...",
+      "not_authorized": "Tidak diizinkan. Gunakan \"backup auth\".",
+      "list": "*File Google Drive:*\n\n{0}",
+      "list_empty": "Tidak ada file ditemukan di folder Levanter.",
+      "deleted": "File berhasil dihapus!",
+      "invalid_id": "Harap berikan ID file yang valid.",
+      "error": "*Kesalahan:* {0}",
+      "url_prompt": "Harap berikan URL yang valid, tandai pesan media, atau gunakan subperintah: list, del <id>, dl <id>.\nContoh: `gupload list`",
+      "short_id_info": "\n\n*Catatan:* Anda hanya perlu memasukkan 2-4 karakter pertama dari ID untuk perintah unduh atau hapus."
+    },
+    "task": {
+      "desc": "Kelola Google Tasks Anda",
+      "usage": "Penggunaan: task <list | lists | switch <nama> | add <teks> | del <id> | done <id> | update <id> <teks> | <teks>>",
+      "added": "Tugas ditambahkan: *{0}*\nTempo: {1}",
+      "deleted": "Tugas dihapus.",
+      "updated": "Tugas *{0}* ditandai sebagai *{1}*",
+      "list_empty": "Tidak ada tugas ditemukan.",
+      "list_header": "📝 *Tugas ({0})*:\n",
+      "not_found": "Tugas tidak ditemukan.",
+      "auth_required": "Harap autentikasi menggunakan *.gauth auth* dan aktifkan izin Google Tasks.",
+      "list_lists": "📝 *Daftar Tugas*:\n",
+      "switched": "Beralih daftar tugas default ke *{0}*."
     }
   }
 }

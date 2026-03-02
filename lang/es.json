@@ -11,7 +11,7 @@
     "reconnect": "[{0}] Reconectando...({1})",
     "reconnect_after": "[{0}] Reconectar despues de 1 minuto",
     "another_login": "[{0}] La Sesion se ha iniciado en otro dispositivo.",
-    "error_message": "```---REPORTE DE ERROR---\n\nVersion : {0}\nMensaje : {1}\nError   : {2}\nJid     : {3}\nComando : {4}\nPlataforma : {5}```\n\n```-----``` *Hecho por LyFE con mucho Amor ❣* ```-----```",
+    "error_message": "```---ERROR REPORT---\\n\\nVersion : {0}\\nMessage : {1}\\nError   : {2}\\nJid     : {3}\\ncommand : {4}\\nPlatform : {5}```\\n\\n```-----``` *Made by LyFE with ❣* ```-----```",
     "deleted_message": "MensajeBorrado",
     "install_external_plugin": "[{0}] Instalando Plugins Externos...",
     "installed_external_plugin": "[{0}] Plugins Externos Instalados.",
@@ -20,18 +20,39 @@
     "plugins_installed": "[{0}] Plugins Instalados",
     "plugin_install_error": "[{0}] Error Instalando {1}, Borrando Plugin",
     "plugin_not_found": "[{0}] Plugin {1} No Encontrado (404), Borrando Plugin",
-    "group_cmd": "Este Comando solo se puede utilizar en Grupos."
+    "group_cmd": "Este Comando solo se puede utilizar en Grupos.",
+    "labels": {
+      "sudo": "SUDO",
+      "auto_read": "AUTO READ MSG",
+      "auto_status": "AUTO STATUS VIEW",
+      "auto_reject": "AUTO REJECT CALL",
+      "always_online": "ALWAYS ONLINE",
+      "anti_delete": "ANTI DELETE MSG",
+      "auto_update": "AUTO UPDATE BOT"
+    },
+    "promoted": "promoted",
+    "demoted": "demoted",
+    "file_size_error": "Size is {0}\n\n{1}",
+    "missing_jid": "missing jids",
+    "no_contacts": "not found contacts, please add contacts",
+    "reaction_not_enabled": "Reaction not enabled",
+    "reaction_not_allowed": "this reaction not allowed",
+    "metadata_fetch_failed": "failed to fetch metadata",
+    "lang_not_supported": "' {0} ' language not supported yet, switching to default language.",
+    "screenshot_error": "an error occured",
+    "id_missing": "id missing",
+    "not_on_whatsapp": "{0} is not on whatsapp.",
+    "yt_auth_required": "Error al descargar: YouTube requiere autenticación.\\n\\n*Soluciones:*\\n1. *Google Auth (Recomendado):* Usa `.gauth auth` para vincular tu cuenta de Google.\\n2. *YT_COOKIE:* Configura la variable de entorno `YT_COOKIE`.\\nGuía: https://github.com/lyfe00011/levanter/wiki/yt%E2%80%90cookie\\n\\n*Error:* {0}"
   },
   "plugins": {
     "common": {
-      "reply_to_message": "Cita un Mensaje...",
-      "not_admin": "No soy Administrador...",
       "reply_to_image": "Cita una Imagen.",
       "update": "_Actualizado_"
     },
     "menu": {
       "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefijo : {0}\n│ Usuario : {1}\n│ Hora : {2}\n│ Dia : {3}\n│ Fecha : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ RAM : {7}\n│ Encendido : {8}\n│ Plataforma : {9}\n╰────────────────```",
-      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefijo : {0}\n┃❃│ Usuario : {1}\n┃❃│ Hora : {2}\n┃❃│ Dia : {3}\n┃❃│ Fecha : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ RAM : {7}\n┃❃│ Encendido : {8}\n┃❃│ Plataforma : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefijo : {0}\n┃❃│ Usuario : {1}\n┃❃│ Hora : {2}\n┃❃│ Dia : {3}\n┃❃│ Fecha : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ RAM : {7}\n┃❃│ Encendido : {8}\n┃❃│ Plataforma : {9}\n┃❃╰───────────────\n╰═════════════════⊷```",
+      "disabled": "disabled"
     },
     "afk": {
       "example": "> *Como Usar AFK:*\n- Set AFK: *afk [razon]*\n- Ejemplo: *afk Estoy ocupado* Visto por ultima vez: #lastseen\n- Enviar un mensaje despues de haber Activado AFK lo desactivara Automaticamente.\n- Apagar AFK: *afk off*",
@@ -43,28 +64,61 @@
       "desc": "Muestra el tiempo de encendido del Bot, el mensaje se puede personalizar."
     },
     "antifake": {
-      "example": "*Antifake Status:* {0}\n\n> *Ejemplo de Uso:*\n- *antifake list* - Ve la Lista Aplicada\n- *antifake !91,1* - !Permitir/Bloquear Nuevos usuarios por Pais.\n- *antifake on | off* - Activar/Desactivar antifake",
-      "desc": "Configurar la Prohibicion de Paises",
-      "not": "No hay Paises en la Lista.",
-      "status": "Antifake is now *{0}*.",
-      "update": "> Antifake Actualizado\n*Permitido:* {0}\n*No Permitido:* {1}"
+      "example": "*Estado Antifake:* {0}\n\n> *Ejemplo de Uso:*\n- *antifake list* - Ver la Lista Aplicada\n- *antifake !91,1* - !Permitir/Bloquear Nuevos usuarios por País.\n- *antifake on | off* - Activar/Desactivar antifake",
+      "desc": "Configurar la Prohibición de Países",
+      "not": "No hay Países en la Lista.",
+      "status": "Antifake está ahora *{0}*.",
+      "update": "> Antifake Actualizado\n*Permitido:* {0}\n*No Permitido:* {1}",
+      "allow_prompt": "*Por favor proporciona los códigos de país para permitir (modo lista blanca)*\n_Ejemplo: antifake allow 1,91_",
+      "disallow_prompt": "*Por favor proporciona los códigos de país para bloquear (modo lista negra)*\n_Ejemplo: antifake disallow 92,93_",
+      "remove_prompt": "*Por favor proporciona los códigos de país para eliminar*\n_Ejemplo: antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ ¡No se pueden mezclar modos!*\n\n_Actualmente estás en Modo Lista Negra. Usa `antifake clear` primero para cambiar a Modo Lista Blanca._",
+      "mode_conflict_blacklist": "*⚠️ ¡No se pueden mezclar modos!*\n\n_Actualmente estás en Modo Lista Blanca. Usa `antifake clear` primero para cambiar a Modo Lista Negra._",
+      "whitelist_success": "*✅ Códigos de país permitidos (Modo Lista Blanca):*\n{0}\n\n_Estos códigos serán permitidos, todos los demás serán bloqueados._",
+      "blacklist_success": "*🚫 Códigos de país bloqueados (Modo Lista Negra):*\n{0}\n\n_Estos códigos serán bloqueados, todos los demás serán permitidos._",
+      "removed": "*Códigos de país eliminados:*\n{0}",
+      "cleared": "*🗑️ Lista Antifake limpiada y desactivada*",
+      "whitelist_mode": "🟢 Modo Lista Blanca (Solo Permitir)",
+      "blacklist_mode": "🔴 Modo Lista Negra (Solo Bloquear)",
+      "enabled": "activado",
+      "disabled": "desactivado"
     },
     "antilink": {
       "desc": "Configurar el Borrado de Links",
       "disable": "_Antilink ya esta Desactivado._",
-      "antilink_notset": "Antilink has not been configured.",
-      "status": "Antilink is now *{0}*.",
-      "info": "`> Antilink Status: {0}\n*Enlaces Permitidos:* {1}\n *Accion :* {2}",
-      "action_invalid": "*La accion especificada no es Valida.*",
-      "action_update": "La Accion del Antilink ha sido actualizada para: *{0}*",
-      "update": "> Antilink Actualizado\n*Permitido:* {0}\n*No Permitido:* {1}",
-      "example": "Antilink Status: *{0}*\n\n> Ejemplos de Uso:\n- antilink info - Ver la configuracion Actual\n- antilink whatsapp.com - Permitir solo este Link\n- antilink on | off - Activar/Desactivar antilink\n- antilink action/<kick | warn | null> - Accion a Aplicar"
+      "antilink_notset": "Antilink está configurado para bloquear todos los enlaces (no hay lista de URL establecida). Use 'antilink allow' o 'antilink disallow' para configurar URLs específicas.",
+      "status": "El Anti-enlace es ahora *{0}*.",
+      "info": "`> Estado del Anti-enlace: {0}\n*Enlaces Permitidos:* {1}\n *Acción:* {2}",
+      "action_invalid": "*La acción especificada no es válida.*",
+      "action_update": "La acción del Anti-enlace ha sido actualizada por: *{0}*",
+      "update": "> Anti-enlace Actualizado\n*Permitido:* {0}\n*No Permitido:* {1}",
+      "enabled": "activado",
+      "disabled": "desactivado",
+      "example": "Estado del Anti-enlace: *{0}*\n\n> Ejemplos de Uso:\n- antilink list - Ver la configuración actual\n- antilink allow whatsapp.com - Permitir solo este enlace\n- antilink disallow facebook.com - No permitir este enlace\n- antilink clear allow - Borrar URLs permitidas\n- antilink clear disallow - Borrar URLs no permitidas\n- antilink on | off - Activar/Desactivar anti-enlace\n- antilink kick | warn | null - Acción a aplicar",
+      "allow_prompt": "*Please provide a URL to allow.*",
+      "no_new_urls": "*No new URLs to add.* All URLs already exist in the list.",
+      "urls_updated": "*Allowed URLs updated*\n\nAdded: {0}\nTotal: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "disallow_prompt": "*Please provide a URL to disallow.*",
+      "no_disallowed_urls": "*No new URLs to disallow.* All URLs are already disallowed.",
+      "disallowed_updated": "*Disallowed URLs updated*\n\nAdded to blocklist: {0}\nTotal blocked: {1} URL(s)\n\n_Note: URLs are case-insensitive_",
+      "settings_cleared": "*Antilink settings cleared.*",
+      "allowed_cleared": "*Allowed URLs cleared.*",
+      "disallowed_cleared": "*Disallowed URLs cleared.*"
     },
     "antiword": {
       "desc": "Borrar palabras Prohibidas",
       "example": "`AntiWord Status: {0}\n> *Ejemplos de Uso:*\n- antiword action/<kick | warn | null>* - Accion a Tomar cuando se detecte la palabra\n- antiword on | off - Activar/Desactivar El Bloqueo de Palabras\n- `setvar` ANTIWORDS:palabra1,palabra2,... - Define palabras a Bloquear",
       "action_update": "La Accion del antiword ha sido Actualizada para: *{0}*",
-      "status": "AntiWord is now *{0}*."
+      "status": "AntiWord is now *{0}*.",
+      "add_prompt": "*Por favor proporciona palabras para agregar.*",
+      "added": "*Palabras agregadas:*\n{0}",
+      "remove_prompt": "*Por favor proporciona palabras para eliminar.*",
+      "removed": "*Palabras eliminadas:*\n{0}",
+      "activated": "activado",
+      "deactivated": "desactivado",
+      "no_words": "*No hay palabras configuradas.*",
+      "info": "*Estado AntiWord:* {0}\n*Acción:* {1}\n\n*Palabras:* {2}",
+      "cleared": "*Lista AntiWord limpiada.*"
     },
     "apk": {
       "desc": "Descarga APK de APKMirror",
@@ -157,16 +211,18 @@
       "delupdate": "🗑 El Saludo (mensaje privado de 1 vez) ha sido eliminado."
     },
     "greetings": {
-      "welcome_desc": "Envia Mensaje de Bienvenida a Nuevos Miembros",
-      "welcome_example": "Mensaje Actual: {0}\n\nPara mas detalles ve a: https://levanter-delta.vercel.app/",
-      "welcome_enable": "✅ _Bienvenida Activada_",
-      "welcome_disable": "📴 _La Bienvenida Ahora esta Desactivada_",
-      "welcome_delete": "_Mensaje de Bienvenida Borrada_",
-      "goodbye_desc": "Envia Mensaje de Despedida a Miembros que Abandonan",
-      "goodbye_example": "El mensaje de despedida Actual es: {0}\n\nPara mas detalles ve a: https://levanter-delta.vercel.app/",
-      "goodbye_enable": "✅ _Despedida Activada_",
-      "goodbye_disable": "📴 _La Despedida Ahora esta Desactivada_",
-      "goodbye_delete": "_Mensaje de Despedida Borrado_"
+      "welcome_desc": "Enviar un mensaje de bienvenida a nuevos miembros",
+      "welcome_example": "El mensaje de bienvenida está actualmente *{0}*\n\n> *Ejemplos de Uso:*\n- welcome ¡Hola &mention! Bienvenido a &name - Establecer mensaje\n- welcome on | off - Activar/Desactivar\n- welcome delete - Eliminar mensaje\n\n> *Marcadores:*\n- &mention - Mencionar nuevo miembro\n- &name - Nombre del grupo\n- &desc - Descripción del grupo\n- &size - Cantidad de miembros\n- &pp - Foto de perfil del miembro\n\n> *Multimedia:* Responde a imagen/video O incluye URL en mensaje\n\nPara más detalles: https://levanter.site/",
+      "welcome_enable": "_Bienvenida activada_",
+      "welcome_disable": "_Bienvenida desactivada_",
+      "welcome_delete": "_Mensaje de bienvenida eliminado_",
+      "welcome_not_set": "_¡Por favor establece un mensaje de bienvenida primero!_\n\n> *Ejemplo:*\nwelcome ¡Hola &mention! Bienvenido a &name\n\nLuego usa: welcome on",
+      "goodbye_desc": "Enviar un mensaje de despedida a los miembros",
+      "goodbye_example": "El mensaje de despedida está actualmente *{0}*\n\n> *Ejemplos de Uso:*\n- goodbye ¡Adiós &mention! Hasta luego - Establecer mensaje\n- goodbye on | off - Activar/Desactivar\n- goodbye delete - Eliminar mensaje\n\n> *Marcadores:*\n- &mention - Mencionar miembro que se va\n- &name - Nombre del grupo\n- &desc - Descripción del grupo\n- &size - Cantidad de miembros\n- &pp - Foto de perfil del miembro\n\n> *Multimedia:* Responde a imagen/video O incluye URL en mensaje\n\nPara más detalles: https://levanter.site/",
+      "goodbye_enable": "_Despedida activada_",
+      "goodbye_disable": "_Despedida desactivada_",
+      "goodbye_delete": "_Mensaje de despedida eliminado_",
+      "goodbye_not_set": "_¡Por favor establece un mensaje de despedida primero!_\n\n> *Ejemplo:*\ngoodbye ¡Adiós &mention! Gracias por estar con nosotros\n\nLuego usa: goodbye on"
     },
     "groq": {
       "example": "*Ejemplo:* groq Hola\n\nDebes Agregar ApiKey, Opcionalmente puedes ajustar las demas Variables:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\n Para mas detalles ve a https://console.groq.com/keys",
@@ -230,7 +286,9 @@
     },
     "common_members": {
       "desc": "Show or kick common memebers in two or more groups",
-      "found": "Found 0 common members."
+      "found": "Found 0 common members.",
+      "common_usage": "*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.",
+      "ginfo_usage": "*Example : info group_invte_link*"
     },
     "insta": {
       "usage": "Ejemplo: `.insta` <Instagram URL>",
@@ -358,7 +416,7 @@
       "usage": "Ejemplo: mention on | off | get\n(Reply to a message to target a specific user.)",
       "desc": "Configurar la función de mención para responder automaticamente cuando mencionan al bot.",
       "not_activated": "Responder a Mencion no esta Activado",
-      "current_status": "La mencion es {0}. Para mas detalles visita: https://levanter-delta.vercel.app/",
+      "current_status": "La mencion es {0}. Para mas detalles visita: https://levanter.site/",
       "activated": "Responder a Mencion ha sido Activado.",
       "deactivated": "Responder a Mencion ha sido Desactivado.",
       "updated": "Preferencias de Mencion Actualizados."
@@ -387,7 +445,8 @@
     "msgs": {
       "desc": "Muestra la cantidad de mensajes enviados por cada cada miembro, tipo de mensaje, ultimo mensaje, ultima vez visto, etc.",
       "msg_init": "\n*Numero :* {0}\n*Nombre :* {1}\n*Total Msgs :* {2}\n",
-      "msg_last": "*VistoHace :* {0} \n"
+      "msg_last": "*VistoHace :* {0} \n",
+      "no_activity": "No activity recorded yet."
     },
     "reset": {
       "usage": "Ejemplo: `reset all` O `reset` <cita o mencion>",
@@ -400,6 +459,21 @@
       "desc": "Identifica y Remueve Participantes inactivos del Grupo.",
       "inactives": "_Total de Inactivos : {0}_",
       "removing": "⚠️_Eliminando a {0} Miembros Inactivos en 7 seconds_⚠️"
+    },
+    "weather": {
+      "desc": "weather info",
+      "usage": "*Example : weather delhi*",
+      "not_found": "_{0} not found_",
+      "report": "*Name :* {0}\n*Country :* {1}\n*Weather :* {2}\n*Temp :* {3}°\n*Feels Like :* {4}°\n*Humidity :* {5}%\n*Visibility  :* {6}m\n*Wind* : {7}m/s {8}\n*Sunrise :* {9}\n*Sunset :* {10}"
+    },
+    "y2mate": {
+      "ytv_desc": "Download YouTube video",
+      "ytv_usage": "_Example: ytv url_",
+      "yta_desc": "Download YouTube audio",
+      "yta_usage": "_Example: yta darari/yt url_",
+      "invalid_link": "*Provide a valid YouTube link!*",
+      "no_video": "*No video found*",
+      "no_audio": "_Audio not found._"
     },
     "amute": {
       "usage": "Como Utilizar:amute <hour> <min>\n- amute on | off\n- amute info\n\nCita texto que sera el mensaje Enviado al Activarse.",
@@ -427,19 +501,32 @@
       "usage": "> Ejemplo:\n- zushi ping, sticker\n- Para configurar todos los comandos, escriba `list` y luego responda con el mensaje copiado (Ejemplo:, zushi mensaje copiado).",
       "desc": "Le permite habilitar comandos para que otros los utilicen en el chat..",
       "already_set": "{0} ya esta Permitido.",
-      "allowed": "*Estos son los Comandos Permitidos para:* @{0}\n{1}"
+      "allowed": "*Estos son los Comandos Permitidos para:* @{0}\n{1}",
+      "no_input": "⚠️ Por favor proporciona nombres de comandos\n\n📝 Ejemplos:\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 Agrega múltiples comandos separados por espacios",
+      "duplicates": "❌ Comandos ya permitidos: {0}\n\n📋 Comandos permitidos actualmente ({1} total):\n{2}\n\n💡 Usa .yami para ver todos los comandos permitidos\n💡 Usa .ope para eliminar comandos",
+      "invalid": "⚠️ No se encontraron comandos válidos\n\nOmitidos inválidos: {0}\n\n💡 Usa .help para ver los comandos disponibles",
+      "error": "❌ Error: {0}",
+      "success": "✅ Se agregaron exitosamente {0} comando{1}:\n{2}\n\n📊 Total permitido: {0} comando{1} para @{3}\n\n💡 Los usuarios ahora pueden usar estos comandos"
     },
     "yami": {
       "usage": "Simplemente envia: `yami`",
       "desc": "Muestra lista de comandos permitidos en el chat..",
-      "not_set": "Aún no se han permitido comandos."
+      "not_set": "Aún no se han permitido comandos.",
+      "no_commands": "📋 No se encontraron comandos permitidos\n\n💡 Usa .zushi para agregar comandos\n📝 Ejemplo: .zushi song video sticker",
+      "list": "📋 Comandos permitidos para @{0}:\n\n{1}\n\n📊 Total: {2} comando{3}\n\n💡 Eliminar con: .ope <nombres de comandos>\n💡 Eliminar todo: .ope all"
     },
     "ope": {
       "usage": "Ejemplo: `ope ping, sticker` O `ope all`",
       "desc": "Revoca comandos permitidos a Grupos o Usuarios.",
       "not_found": "No se encontraron comandos permitidos para {0}.",
       "all_removed": "Se han eliminado todos los comandos permitidos.",
-      "removed": "*Se han removido estos comandos Para:* @{0}\n{1}"
+      "removed": "*Se han removido estos comandos Para:* @{0}\n{1}",
+      "no_input": "⚠️ Por favor proporciona nombres de comandos para eliminar\n\n📝 Ejemplos:\n  • .ope song video\n  • .ope all (elimina todo)\n\n💡 Usa .yami para ver los comandos permitidos",
+      "not_found_list": "❌ Comando{0} no encontrado{0}: {1}{2}\n\n💡 Usa .yami para ver todos los comandos permitidos\n📝 Ejemplo: .ope song video",
+      "error": "❌ Error: {0}",
+      "no_commands": "⚠️ No se encontraron comandos para este usuario/grupo\n\n💡 Usa .zushi para agregar comandos primero",
+      "all_success": "✅ Todos los comandos eliminados\n\n💡 Usa .zushi para agregar nuevos comandos",
+      "success": "✅ Eliminados {0} comando{1}:\n{2}\n\n📊 Para: @{3}\n\n💡 Usa .yami para ver los comandos restantes\n💡 Usa .ope all para eliminar todo"
     },
     "pdm": {
       "usage": "Como Utilizar: `pdm` on | off",
@@ -513,7 +600,8 @@
       "desc": "Muestra la foto de perfil e información adicional (Ejemplo:, acerca de, estado) de un usuario o grupo."
     },
     "gjid": {
-      "desc": "Enumera todos los Grupos JID con sus nombres."
+      "desc": "Enumera todos los Grupos JID con sus nombres.",
+      "item": "*{0}. {1}*\n{2}\n"
     },
     "qr": {
       "usage": "Ejemplo: `qr` mensaje o link o citando a una imagen `qr` para ver el contenido del QR",
@@ -565,10 +653,20 @@
       "deleted": "🗑 Estado programado borrado."
     },
     "antispam": {
-      "usage": "Como Utilizar:antispam on | off",
-      "desc": "Ajsutar AntiSpam en el Grupo.",
-      "activated": "AntiSpam ha sido Activado.",
-      "deactivated": "AntiSpam ha sido Desactivado."
+      "desc": "Administra la protección antispam con límites configurables",
+      "usage": "Use: antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *Estado de Antispam*\n\n🔴 Desactivado\n\nUsa `antispam on` para activar la protección",
+      "info_status": "📊 *Estado de Antispam*\n\n{status}\nNivel: {level}\nAcción: {action}\n\n*Umbrales de Detección:*\n• Límite de puntuación: {score} pts\n• Límite de mensajes: {messages} msgs\n• Ventana de tiempo: {time}s\n• Penalización por repetición: {penalty}x",
+      "deactivated": "⚠️ *Protección Antispam Desactivada*\n\nLa detección de spam está ahora APAGADA",
+      "activated": "✅ *Protección Antispam Activada*\n\nNivel: {level} ({description})\nAcción: {action}\n\n*Umbrales:*\n• Puntuación: {score} pts\n• Mensajes: {messages} msgs\n• Tiempo: {time}s",
+      "level_set": "✅ *Nivel Cambiado*\n\nNuevo nivel: {level}\n\n*Umbrales:*\n• Puntuación: {score} pts\n• Mensajes: {messages} msgs\n• Tiempo: {time}s\n• Penalización: {penalty}x",
+      "action_set": "✅ *Acción Cambiada*\n\nLos spammers serán: {action_desc}\n\n*Configuración Actual:*\nNivel: {level} | Acción: {action}",
+      "invalid_level": "❌ Nivel inválido. Usa: low, medium, high",
+      "help": "📖 *Ayuda Antispam*\n\n*Comandos:*\n• `antispam on` - Activar (por defecto: medium)\n• `antispam off` - Desactivar\n• `antispam <low/medium/high>` - Cambiar sensibilidad\n• `antispam <warn/delete/kick>` - Cambiar acción\n• `antispam info` - Ver configuración actual\n\n*Niveles:*\n• Low - Relajado (grupos activos)\n• Medium - Equilibrado (recomendado)\n• High - Estricto (grupos problemáticos)",
+      "spam_warning": "⚠️ @{mention} ¡Deja de hacer spam!",
+      "action_warn": "advertido (no expulsado)",
+      "action_delete": "mensajes eliminados solamente",
+      "action_kick": "expulsado del grupo"
     },
     "sticker": {
       "desc": "Convierte una Imagen, GIF o Video Citado en Sticker.",
@@ -599,8 +697,8 @@
       "desc": "Menciona a miembros del grupo. Utiliza `tag all` para mencionar a todos los miembros, `tag admin` para mencionar solo a los administradores del grupo, `tag notadmin` para mencionar a los miembros que no sean administradores o proporciona un mensaje personalizado para enviar como mencion"
     },
     "tictactoe": {
-      "usage": "Ejemplo: `tictactoe` <jid_DeOponente> O `tictactoe` restart <jid_DeOponente> O `tictactoe` end",
-      "desc": "Juega «3 en Raya» contra Alguien. Desafía a alguien mencionándolo, respondiendo a su mensaje o especificando su JID. Usa `tictactoe end` para terminar el juego y `tictactoe restart` <jid_DeOponente> para reiniciar con un nuevo oponente.",
+      "usage": "Example: tictactoe <opponent_jid> OR tictactoe normal <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end\nEl modo predeterminado es infinito, use 'tictactoe normal' para el modo normal.",
+      "desc": "Juega «3 en Raya» contra Alguien. Desafía a alguien mencionándolo, respondiendo a su mensaje o especificando su JID. Usa `tictactoe end` para terminar el juego y `tictactoe restart` <jid_DeOponente> para reiniciar con un nuevo oponente. El modo predeterminado es infinito, use `tictactoe normal` para el modo normal.",
       "choose_opponent": "Elige con quien jugar citando su mensaje o mencionandolo. No puedes jugar contra ti mismo.",
       "game_ended": "Juego Terminado.",
       "game_restarted": "El juego se reinició con nuevo Jugador..",
@@ -609,7 +707,9 @@
       "already_occupied": "_Ya ocupado_",
       "current_player": "Jugador Actual",
       "game_finish": "Juego Terminado 🏁",
-      "winner": "Ganador"
+      "winner": "Ganador",
+      "restart": "Restart Game",
+      "header": "---Tic Tac Toe---"
     },
     "tiktok": {
       "usage": "Como Utilizar:tiktok <TikTok URL> (O Cita un mensaje)",
@@ -678,14 +778,30 @@
       "usage": "Ejemplo: Cita o Menciona al Usuario que Recibira una Advertencia. `warn` @user o `warn reset` (para resetear).",
       "desc": "Advertir a un usuario en el chat grupal. Este comando aumenta advertencias de un usuario. Si el numero supera el límite, el usuario será expulsado del grupo.. Use 'warn reset' para Resetear Advertencias.",
       "reset_usage": "Cita o menciona para Resetear. Ejemplo: warn reset @user.",
-      "cannot_remove_admin": "No puedo Eliminar a un Administrador..."
+      "cannot_remove_admin": "No puedo Eliminar a un Administrador...",
+      "kick_default": "{0} has been kicked for exceeding warn limit.",
+      "warn_default": "⚠️ Warning {0}! {1}/{2} warnings remaining."
     },
     "wcg": {
-      "usage": "Ejemplo:\n- `wcg start` (Forzar el inicio del juego)\n- `wcg end` (termina el juego actual)\n- `wcg` <palabra> (Juega continuando la cadena de palabras)",
-      "desc": "Juego cadenas de palabras (cadáver exquisito texto): participa agregando una palabra que continúe la cadena. Utiliza `wcg start` para forzar el inicio de un nuevo juego o `wcg end` para detener el juego actual."
+      "usage": "Ejemplo:\n- `wcg start` (Forzar el inicio del juego)\n- `wcg end` (termina el juego actual)\nEl modo predeterminado es fácil.",
+      "desc": "Juego cadenas de palabras (cadáver exquisito texto): participa agregando una palabra que continúe la cadena. Utiliza `wcg start` para forzar el inicio de un nuevo juego o `wcg end` para detener el juego actual.",
+      "game_ends": "Game Ends",
+      "already_used": "_Already Used this Word!_",
+      "not_starting_with": "_Not Starting with {0}_",
+      "length_limit": "_This word length is less than {0}_",
+      "not_in_list": "_This word is not in my words list_",
+      "turn_info": "🎲Turn : @{0}\n🙌Next : @{1}\n🆎Your word must start with *{2}* and include at least *{3}* letters\n🏆Players remaining : {4}/{5}\n⏳You have *{6}s* to answer\n📝Total words : {7}",
+      "timeout": "@{0} ran out of time! They're out! 🚫",
+      "winner": "@{0} Won 🏆\nWords : *{1}*\nLongest word : *{2} ({3})* by @{4} 📚\nTime : *{5}* ⏱️",
+      "joined": "@{0} Joined 👏",
+      "starting": "🎮 Game starting...\n👥 Needs 2 or more players 🙋‍♂️🙋‍♀️\n⏳ 60 seconds left to join ⏳\n🧩 Mode {0}",
+      "starts_in": "🎮 Game starts in {0} seconds ⏳\nType *join* to play 🙋‍♂️🙋‍♀️\n🧩 Mode {1}{2}",
+      "players_count": "\n\n👥 {0} players joined.",
+      "terminated": "_Not enough players. Game terminated._",
+      "mode_update": "_Modo WCG actualizado a {0}_"
     },
     "wrg": {
-      "usage": "Ejemplo:\n- `wrg start` (Forzar el inicio del juego)\n- `wrg end` (termina el juego actual)\n- `wrg` <palabra> (Juega enviando palabra)",
+      "usage": "Ejemplos:\n- wrg start (forzar el inicio del juego de palabras aleatorias)\n- wrg hard (iniciar en modo difícil)\n- wrg easy (iniciar en modo fácil)\n- wrg end (terminar el juego actual)",
       "desc": "Juego de palabras al azar: participa en un juego en el que debes enviar palabras en respuesta a una pregunta aleatoria. Usa `wrg start` para comenzar un nuevo juego o `wrg end` para terminar."
     },
     "yts": {
@@ -716,11 +832,62 @@
       "updated": "Se ha Completado la Actualizacion Correctamente"
     },
     "antigm": {
-      "usage": "> Usage:\n- antigm <on|off> — Enable or disable anti group mention\n- antigm <delete|warn|kick> — Set action when someone mentions the group\n- antigm ignore <jid,jid,jid,...> — Ignore anti group mention from specific groups",
-      "action": "Action updated: group mentions will now result in *{0}*.",
-      "filter": "Ignore JIDs updated for anti group mention.",
-      "enabled": "Anti group mention has been enabled.",
-      "disabled": "Anti group mention has been disabled."
+      "usage": "> Uso:\n- antigm <on|off> — Activar o desactivar anti mención de grupo\n- antigm <delete|warn|kick> — Establecer acción cuando alguien menciona al grupo\n- antigm ignore <jid,jid,jid,...> — Ignorar anti mención de grupo para grupos específicos",
+      "action": "Acción actualizada: las menciones de grupo ahora resultarán en *{0}*.",
+      "filter": "JIDs ignorados actualizados para anti mención de grupo.",
+      "enabled": "Anti mención de grupo ha sido activada.",
+      "disabled": "Anti mención de grupo ha sido desactivada."
+    },
+    "reminder": {
+      "desc": "Administrar recordatorios de Google Calendar.",
+      "usage": "> *Uso de Recordatorios:*\n- `reminder <texto>` - Establecer un nuevo recordatorio (ej. 'reunión mañana a las 10am')\n- `reminder list` - Listar todos los recordatorios\n- `reminder del <id>` - Eliminar un recordatorio",
+      "success": "✅ Recordatorio establecido: *{0}* el {1}",
+      "list": "*Tus Recordatorios:*\n\n{0}",
+      "list_empty": "No se encontraron recordatorios.",
+      "deleted": "Recordatorio eliminado correctamente!",
+      "invalid_id": "Por favor, proporciona un ID de evento válido.",
+      "auth_required": "*Autenticación Requerida:*\n\nUsa \"gauth\" para autorizar el bot.",
+      "time": "Hora",
+      "id": "ID",
+      "short_id_info": "\n\n*Nota:* Solo necesitas ingresar los primeros 2-4 caracteres del ID para el comando de eliminación."
+    },
+    "gauth": {
+      "desc": "Gestiona la autenticación de la API de Google para funciones como Restricción de Edad en YouTube, Google Drive, Calendar y Tasks.",
+      "usage": "*Comandos de Google Auth:*\\n\\n- `.gauth auth` — Inicia el proceso de autenticación.\\n- `.gauth code <url_or_code>` — Valida el código de autenticación.\\n- `.gauth import` — Importa `credentials.json` (responde al archivo).\\n- `.gauth status` — Verifica el estado actual de la autenticación.\\n- `.gauth logout` — Borra las credenciales y tokens para esta sesión.\\n\\n*Nota:* Google Auth es opcional para las funciones generales de YouTube, pero obligatorio para videos con restricción de edad e integraciones con Google Drive/Calendar/Tasks.",
+      "prompt": "*Guía de configuración de la autenticación de Google:*\n\n1. *Crear proyecto:* Vaya a https://console.cloud.google.com/, haga clic en \"Select a project\" > \"New Project\", asígnele el nombre \"Levanter\" y hace clic en \"Create\".\n2. *Habilitar APIs:* Vaya a \"APIs & Services\" > \"Library\". Busque y habilite \"Google Drive API\", \"Google Calendar API\" y \"Google Tasks API\".\n3. *Pantalla de consentimiento de OAuth:* Vaya a \"APIs & Services\" > \"OAuth consent screen\". Elija \"External\", complete los campos obligatorios y, en la sección \"Audience\", agregue su correo electrónico a \"Test users\" (OBLIGATORIO).\n4. *Credenciales:* Vaya a \"APIs & Services\" > \"Credentials\". Haga clic en \"Create Credentials\" > \"OAuth client ID\". Seleccione \"Desktop app\" como tipo de aplicación, asígnele un nombre y haga clic en \"Create\".\n5. *Descargar:* Junto a su nuevo Client ID, haga clic en el icono de descarga (JSON). Guárdelo y use `.gauth import` respondiendo al archivo.\n6. *Autorizar:* Ahora haga clic en el enlace de abajo para autorizar:\n{0}\n\n7. *Completar:* Inicie sesión, acepte la advertencia de \"Unverified app\" (Haga clic en \"Advanced\" > \"Go to Levanter\"), copie la URL completa de la barra de direcciones después de la redirección y envíe:\n`.gauth code <url_copiada>`",
+      "success": "¡Autenticación exitosa!",
+      "import_success": "¡Archivo `credentials.json` importado con éxito! Ahora use `.gauth auth` para autorizar.",
+      "import_reply": "Por favor, responda a un archivo `credentials.json`.",
+      "status_auth": "*Estado:* Autenticado para la sesión.",
+      "status_not_auth": "*Estado:* No autenticado para la sesión. Use `.gauth auth`.",
+      "logout": "Sesión cerrada y datos de Google Auth limpiados para la sesión.",
+      "failed": "*Error:* {0}"
+    },
+    "gdrive": {
+      "desc": "Operaciones de Google Drive (subir, listar, eliminar).",
+      "upload_success": "¡Carga completa!",
+      "uploading": "Subiendo multimedia a Drive...",
+      "not_authorized": "No autorizado. Usa \"backup auth\".",
+      "list": "*Archivos de Google Drive:*\n\n{0}",
+      "list_empty": "No se encontraron archivos en la carpeta Levanter.",
+      "deleted": "¡Archivo eliminado correctamente!",
+      "invalid_id": "Por favor, proporciona un ID de archivo válido.",
+      "error": "*Error:* {0}",
+      "url_prompt": "Proporcione una URL válida, etiquete un mensaje multimedia o use subcomandos: list, del <id>, dl <id>.\nEjemplo: `gupload list`",
+      "short_id_info": "\n\n*Nota:* Solo necesitas ingresar los primeros 2-4 caracteres del ID para los comandos de descarga o eliminación."
+    },
+    "task": {
+      "desc": "Administra tus Google Tasks",
+      "usage": "Uso: task <list | lists | switch <nombre> | add <texto> | del <id> | done <id> | update <id> <texto> | <texto>>",
+      "added": "Tarea añadida: *{0}*\nVence: {1}",
+      "deleted": "Tarea eliminada.",
+      "updated": "Tarea *{0}* marcada como *{1}*",
+      "list_empty": "No se encontraron tareas.",
+      "list_header": "📝 *Tareas ({0})*:\n",
+      "not_found": "Tarea no encontrada.",
+      "auth_required": "Por favor, autentícate usando *.gauth auth* y habilita los permisos de Google Tasks.",
+      "list_lists": "📝 *Listas de Tareas*:\n",
+      "switched": "Se cambió la lista de tareas predeterminada a *{0}*."
     }
   }
 }

@@ -10,7 +10,9 @@ const {
   bot,
   PDF,
   lang,
+  TEMP_DIR,
 } = require('../lib/')
+const { join } = require('path')
 const fs = require('fs')
 
 bot(
@@ -50,20 +52,38 @@ bot(
     if (!message.reply_message || (!message.reply_message.video && !message.reply_message.audio)) {
       return await message.send(lang.plugins.mp3.usage)
     }
-    return await message.send(
-      await getFfmpegBuffer(
-        await message.reply_message.downloadAndSaveMediaMessage('mp3'),
-        'mp3.mp3',
-        'mp3'
-      ),
-      {
-        filename: 'mp3.mp3',
-        mimetype: 'audio/mpeg',
-        ptt: !message.reply_message.ptt,
-        quoted: message.data,
-      },
-      'audio'
-    )
+
+    try {
+      const filePath = await message.reply_message.downloadAndSaveMediaMessage('mp3')
+
+      const isPtt = !message.reply_message.ptt
+      const buffer = await getFfmpegBuffer(
+        filePath,
+        isPtt ? 'audio.opus' : 'audio.mp3',
+        isPtt ? 'opus' : 'mp3'
+      )
+
+      const result = await message.send(
+        buffer,
+        isPtt
+          ? {
+            ptt: true,
+            mimetype: 'audio/ogg; codecs=opus',
+            quoted: message.data,
+          }
+          : {
+            filename: 'audio.mp3',
+            mimetype: 'audio/mpeg',
+            ptt: false,
+            quoted: message.data,
+          },
+        'audio'
+      )
+
+      return result
+    } catch (error) {
+      throw error
+    }
   }
 )
 
@@ -186,7 +206,11 @@ bot(
     if (!message.reply_message || !message.reply_message.image)
       return await message.send(lang.plugins.page.not_found)
     if (isNaN(match)) return await message.send(lang.plugins.page.usage)
-    await message.reply_message.downloadAndSaveMediaMessage(`./pdf/${match}`)
+    const pdfDir = join(TEMP_DIR, 'pdf')
+    if (!fs.existsSync(pdfDir)) {
+      fs.mkdirSync(pdfDir, { recursive: true })
+    }
+    await message.reply_message.downloadAndSaveMediaMessage(`pdf/${match}`)
     return await message.send(lang.plugins.page.add.format(match))
   }
 )
@@ -219,7 +243,7 @@ bot(
     type: 'video',
   },
   async (message, match) => {
-    const mergeDir = './media/merge'
+    const mergeDir = join(TEMP_DIR, 'merge')
 
     if (!fs.existsSync(mergeDir)) {
       fs.mkdirSync(mergeDir, { recursive: true })
@@ -233,7 +257,7 @@ bot(
         return await message.send(lang.plugins.merge.usage)
       }
 
-      await message.reply_message.downloadAndSaveMediaMessage(`${mergeDir}/${match}`)
+      await message.reply_message.downloadAndSaveMediaMessage(`merge/${match}`)
       return await message.send(lang.plugins.merge.add.format(match))
     } else {
       const files = fs.readdirSync(mergeDir)
@@ -455,7 +479,7 @@ bot(
     type: 'misc',
   },
   async (message, match) => {
-    const mediaPath = './media/avm'
+    const mediaPath = join(TEMP_DIR, 'avm')
 
     if (!fs.existsSync(mediaPath)) {
       fs.mkdirSync(mediaPath, { recursive: true })
@@ -472,7 +496,7 @@ bot(
 
     if (message.reply_message) {
       const mediaType = message.reply_message.audio ? 'audio' : 'video'
-      const filePath = `${mediaPath}/${mediaType}`
+      const filePath = `avm/${mediaType}`
 
       await message.reply_message.downloadAndSaveMediaMessage(filePath)
       return await message.send(
